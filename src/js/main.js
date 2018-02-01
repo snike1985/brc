@@ -1,5 +1,6 @@
 //= other.js
 
+
 const base = {
     _script() {
         console.log('...script is working');
@@ -8,4 +9,5 @@ const base = {
         this._script();
     }
 }
+
 base.init();
