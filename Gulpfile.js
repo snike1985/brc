@@ -65,7 +65,7 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(rigger()) //This pipe helps to take all needed js files, which are included through the main.js
         .pipe(babel({
-            presets: ['es2015', 'es2016','es2017', 'stage-0']
+            presets: ['env', 'stage-0']
         }))
         .pipe(sourcemaps.init()) //Inits sourcemap
         .pipe(uglify())
