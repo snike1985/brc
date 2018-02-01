@@ -10,4 +10,5 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     background-color: $red;
+    @include Monserrat();
 }
