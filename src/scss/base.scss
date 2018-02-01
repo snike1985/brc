@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+}
+
 html, body {
     height: 100%;
 }
@@ -8,7 +13,7 @@ html, body {
 body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    background-color: $red;
-    //@include Monserrat();
-    @extend %Regular;
+    background-color: var(--white);
+    font-family: var(--FontRegular);
+    font-size: 100%;
 }
