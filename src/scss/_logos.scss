@@ -1,0 +1,230 @@
+.logos {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 1000px;
+    margin-bottom: 2px;
+    padding: 0 35px 300px;
+    text-align: center;
+    background-image: url("../img/logos/logos_bg1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+
+    &_2 {
+      background-image: url("../img/logos/logos_bg2.png");
+
+      .logos__header { color: rgb(92, 132, 114) }
+    }
+
+    &_3 {
+      background-image: url("../img/logos/logos_bg3.png");
+
+      .logos__header { color: rgb(198, 125, 42) }
+    }
+  }
+
+  &__head {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: rgb(82, 45, 29);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    line-height: 1.375;
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .btn { display: inline-flex }
+  }
+
+  &__footer {
+
+  }
+}
+@media (min-width: $phone-landscape) {
+  .logos {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100%/3 - 1px);
+      min-height: 1000px;
+      padding: 0 35px 300px;
+      text-align: center;
+      background-image: url("../img/logos/logos_bg1.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% auto;
+
+      &_2 {
+        background-image: url("../img/logos/logos_bg2.png");
+
+        .logos__header { color: rgb(92, 132, 114) }
+      }
+
+      &_3 {
+        background-image: url("../img/logos/logos_bg3.png");
+
+        .logos__header { color: rgb(198, 125, 42) }
+      }
+    }
+
+    &__head {
+      margin-bottom: 25px;
+      font-size: 20px;
+      color: rgb(82, 45, 29);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &__content {
+      flex-grow: 1;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+      line-height: 1.375;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .btn { display: inline-flex }
+    }
+
+    &__footer {
+
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100%/3 - 1px);
+      min-height: 1000px;
+      padding: 0 35px 300px;
+      text-align: center;
+      background-image: url("../img/logos/logos_bg1.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% auto;
+
+      &_2 {
+        background-image: url("../img/logos/logos_bg2.png");
+
+        .logos__header { color: rgb(92, 132, 114) }
+      }
+
+      &_3 {
+        background-image: url("../img/logos/logos_bg3.png");
+
+        .logos__header { color: rgb(198, 125, 42) }
+      }
+    }
+
+    &__head {
+      margin-bottom: 25px;
+      font-size: 20px;
+      color: rgb(82, 45, 29);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &__content {
+      flex-grow: 1;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+      line-height: 1.375;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .btn { display: inline-flex }
+    }
+
+    &__footer {
+
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .logos {
+
+  }
+}
+

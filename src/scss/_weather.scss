@@ -1,0 +1,42 @@
+.weather {
+  display: flex;
+  color: #FFFFFF;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include Monserrat();
+
+  span {
+    position: relative;
+    display: block;
+    margin-right: 4px;
+    padding-right: 7px;
+
+    &:after {
+      @include absoluteCenterY()
+      right: 0;
+      content: '|';
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .weather {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .weather {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .weather {
+    font-size: 13px;
+  }
+}
+@media (min-width: $desktop) {
+  .weather {
+
+  }
+}
+
