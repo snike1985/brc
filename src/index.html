@@ -6,7 +6,10 @@
     @@include('./view/components/head.html')
 </head>
 <body>
+@@include('./view/templates/navigation.html')
     <main>
+        @@include('./view/templates/header.html')
+        @@include('./view/templates/hero.html')
         <div class="inner">
             <div class="title">
                 <div class="super">
@@ -20,6 +23,7 @@
                 </div>
             </div>
         </div>
+        @@include('./view/templates/logos.html')
     </main>
     <script src="js/main.js" charset="utf-8"></script>
 </body>

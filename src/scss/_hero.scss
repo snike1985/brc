@@ -1,0 +1,28 @@
+.hero {
+  min-height: 300px;
+  padding-top: calc(100%*1240/1919);
+  background-image: url("../img/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero {
+
+  }
+}

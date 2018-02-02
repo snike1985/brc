@@ -1,0 +1,48 @@
+.logo {
+  @include absoluteCenter();
+
+  img {
+    display: block;
+    width: 46px;
+  }
+
+  &_main {
+    top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    transform: translate(-50%, 0);
+    @include Zimra-Black();
+
+    img {
+      width: 228px;
+      margin-bottom: 24px;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $desktop) {
+  .logo {
+
+    &_main {
+      top: 77px;
+    }
+  }
+}
+

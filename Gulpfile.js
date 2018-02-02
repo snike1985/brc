@@ -21,21 +21,27 @@ var gulp = require('gulp'),
         build: { //Destination where to put our ready to use files
             html: 'public/',
             js: 'public/js/',
+            vendors_js: 'public/js/vendors/',
             css: 'public/css/',
-            img: 'public/img/'
+            img: 'public/img/',
+            fonts: 'src/fonts/'
 
         },
         src: { //Source folder
             html: 'src/*.html', //This is the place where we take our htm file
             js: 'src/js/main.js', //The place we take our js file, its the only one - and its the main
+            vendors_js: 'src/js/vendors/*.js',
             style: 'src/scss/main.scss', //Here we take our scss, it includes all of the scss we use
-            img: 'src/img/**/*' //We take images here, including nested folders
+            img: 'src/img/**/*', //We take images here, including nested folders
+            fonts: 'src/fonts/*'
         },
         watch: { //We "watch" for changes from this folders and files
             html: 'src/**/*.html',
             js: 'src/**/*.js',
+            vendors_js: 'src/js/vendors/*.js',
             style: 'src/scss/**/*.scss',
-            img: 'src/img/**/*'
+            img: 'src/img/**/*',
+            fonts: 'src/fonts/*'
         },
         clean: './public'
     };

@@ -1,7 +1,18 @@
-@import "reset";
+//@import "reset";
+@import "resetNew";
 @import "fonts";
 @import "mixins";
+@import "variables";
 @import "typography";
 @import "colors";
 @import "base";
 @import "grid";
+@import "btn";
+
+@import "navigation";
+@import "logo";
+@import "menu";
+@import "weather";
+@import "header";
+@import "hero";
+@import "logos";
