@@ -1,0 +1,10 @@
+[data-template="main-title"] {
+    @extend %inner;
+
+    text-align: center;
+    margin-bottom: 10.63rem;
+
+    p {
+        font-weight: 600;
+    }
+}
