@@ -3,6 +3,22 @@ console.clear();
 //= header.js
 // weather.js
 
+
+// $(document.body).on('scroll touchmove load', function(e) {
+//     console.log('scrolled');
+//     var newposition = ($(window).scrollTop() * 0.35),
+//         newpositionTitle = ($(window).scrollTop() * 0.7),
+//         backgroundposition = ($(window).scrollTop() * 0.25),
+//         heightOfTitle = $('.hero').height() - $('.hero__title').height() - 100;
+//
+//     if ( $(window).scrollTop() <= heightOfTitle && $(window).width() > 870)  {
+//         $('.hero__title').css('transform', 'translateY(' + newpositionTitle + '%)');
+//         // $('header').css('background-position-y', backgroundposition + 'px');
+//
+//     }
+// });
+
+
 'use strict';
 const base = {
     _header() {
@@ -16,19 +32,24 @@ const base = {
         [...menu].forEach(obj => new Menu(obj));
     },
     _para() {
-        console.log('...scroll event inited');
+        const windowElement = document.body;
         const hero = document.querySelector('.hero');
         const title = hero.querySelector('.hero__title');
 
-        window.addEventListener('scroll',function(e) {
-            console.log('...scrolled');
-            const wScroll = window.scrollTop;
-            let newposition = (wScroll * 0.35),
-                newpositionTitle = (wScroll * 0.7),
-                heightOfTitle = hero.innerHeight - title.innerHeight - 100;
 
-            if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
+        windowElement.addEventListener('scroll', (e) => {
+
+            const wScroll = windowElement.scrollTop;
+            
+            let newposition = wScroll * 0.35,
+                newpositionTitle = wScroll * 0.7,
+                heightOfTitle = hero.offsetHeight - title.offsetHeight - 100;
+
+            if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
                 title.style.transform = 'translateY(' + newpositionTitle + '%)';
+
+            } else {
+                console.log('...else')
             }
         })
     },
