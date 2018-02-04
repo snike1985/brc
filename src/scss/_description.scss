@@ -2,13 +2,14 @@
   display: block;
   position: relative;
   min-height: 180px;
+  max-width: 600px;
   padding: 10px 50px;
   font-size: 15.594px;
   color: rgb(0, 0, 0);
   line-height: 1.364;
   font-weight: 400;
 
-  &.white {
+  &.description_white {
     color: rgb(255,255,255);
 
     .description__title,
