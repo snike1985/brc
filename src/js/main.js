@@ -1,22 +1,8 @@
 console.clear();
 //= menu.js
 //= header.js
+//= smooth-scroll.js
 // weather.js
-
-
-// $(document.body).on('scroll touchmove load', function(e) {
-//     console.log('scrolled');
-//     var newposition = ($(window).scrollTop() * 0.35),
-//         newpositionTitle = ($(window).scrollTop() * 0.7),
-//         backgroundposition = ($(window).scrollTop() * 0.25),
-//         heightOfTitle = $('.hero').height() - $('.hero__title').height() - 100;
-//
-//     if ( $(window).scrollTop() <= heightOfTitle && $(window).width() > 870)  {
-//         $('.hero__title').css('transform', 'translateY(' + newpositionTitle + '%)');
-//         // $('header').css('background-position-y', backgroundposition + 'px');
-//
-//     }
-// });
 
 
 'use strict';
@@ -31,11 +17,13 @@ const base = {
 
         [...menu].forEach(obj => new Menu(obj));
     },
+    _smoothScroll() {
+
+    },
     _para() {
         const windowElement = document.body;
         const hero = document.querySelector('.hero');
         const image = hero.querySelector('img');
-
 
         windowElement.addEventListener('scroll', (e) => {
 
@@ -71,6 +59,7 @@ const base = {
         scene.addTo(controller);
     },
     init() {
+        this._smoothScroll();
         this._header();
         this._menu();
         this._para();
