@@ -47,7 +47,46 @@
 }
 @media (min-width: $tablet-portrait) {
   .map {
+    display: flex;
+    width: calc(100% - 32px);
+    min-height: 544px;
+    max-width: 1168px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #221409;
+    border: 7px solid #92703c;
 
+    &__pic {
+
+    }
+
+    &__info {
+      display: block;
+      padding: 130px 0 130px 34px;
+      font-size: 14.46px;
+      color: rgb(250, 248, 246);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.2;
+
+      h2 {
+        font-weight: 800;
+      }
+
+      ul {
+
+        li {
+          position: relative;
+          padding-left: 20px;
+
+          &:before {
+            @include absoluteCenterY();
+            left: 0;
+            content: '»';
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
