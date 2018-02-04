@@ -7,11 +7,14 @@
 @import "colors";
 @import "base";
 @import "grid";
+@import "image";
+
 @import "btn";
 @import "site";
 
 //Templates
 @import "./templates/TMP-main-title";
+@import "./templates/TMP-main-featured";
 
 @import "navigation";
 @import "logo";
@@ -23,3 +26,4 @@
 @import "awards";
 @import "hero";
 @import "logos";
+@import "btn";

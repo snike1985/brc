@@ -5,11 +5,7 @@
 
 const base = {
     _header() {
-        const header = document.querySelectorAll('.header');
-
-        header.forEach((obj) => {
-            new Header(obj);
-        });
+        new Header('.header');
     },
     _menu() {
         const menu = document.querySelectorAll('.menu');
