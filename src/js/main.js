@@ -7,16 +7,12 @@ const base = {
     _header() {
         const header = document.querySelectorAll('.header');
 
-        [...header].forEach((obj) => {
-            new Header(obj);
-        });
+        [...header].forEach(obj => new Header(obj));
     },
     _menu() {
         const menu = document.querySelectorAll('.menu');
 
-       [...menu].forEach((obj) => {
-           new Menu(obj);
-       });
+        [...menu].forEach(obj => new Menu(obj));
     },
     _para() {
         const hero = document.querySelector('.hero');
@@ -56,7 +52,7 @@ const base = {
     },
     init() {
         this._header();
-        //this._menu();
+        this._menu();
         this._para();
         //this._parallax();
     }
