@@ -17,10 +17,7 @@ const base = {
 
         [...menu].forEach(obj => new Menu(obj));
     },
-    _smoothScroll() {
-
-    },
-    _para() {
+    _parallaxHero() {
         const windowElement = document.body;
         const hero = document.querySelector('.hero');
         const image = hero.querySelector('img');
@@ -32,7 +29,7 @@ const base = {
             let newposition = wScroll * 0.35,
                 newpositionTitle = wScroll * 0.25,
                 heightOfTitle = hero.offsetHeight - image.offsetHeight - 100;
-                image.style.transform = 'translateY(' + newpositionTitle + 'px)';
+                image.style.transform = 'translateY(-' + newpositionTitle + 'px)';
             if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
 
             }
@@ -59,10 +56,9 @@ const base = {
         scene.addTo(controller);
     },
     init() {
-        this._smoothScroll();
         this._header();
         this._menu();
-        this._para();
+        this._parallaxHero();
         //this._parallax();
     }
 }
