@@ -3,6 +3,7 @@ console.clear();
 //= header.js
 // weather.js
 
+'use strict';
 const base = {
     _header() {
         const header = document.querySelectorAll('.header');
@@ -19,16 +20,16 @@ const base = {
         const hero = document.querySelector('.hero');
         const title = hero.querySelector('.hero__title');
 
-        window.addEventListener('scroll', (e) => {
+        window.addEventListener('scroll',function(e) {
             console.log('...scrolled');
-            // const wScroll = window.scrollTop;
-            // let newposition = (wScroll * 0.35),
-            //     newpositionTitle = (wScroll * 0.7),
-            //     heightOfTitle = hero.innerHeight - title.innerHeight - 100;
-            //
-            // if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
-            //     title.style.transform = 'translateY(' + newpositionTitle + '%)';
-            // }
+            const wScroll = window.scrollTop;
+            let newposition = (wScroll * 0.35),
+                newpositionTitle = (wScroll * 0.7),
+                heightOfTitle = hero.innerHeight - title.innerHeight - 100;
+
+            if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
+                title.style.transform = 'translateY(' + newpositionTitle + '%)';
+            }
         })
     },
     _parallax() {
