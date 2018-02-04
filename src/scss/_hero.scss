@@ -5,7 +5,9 @@
   padding-top: calc(100%*1240/1919);
 
   img {
-    @include absoluteCenter();
+    //@include absoluteCenter();
+    position: absolute;
+    left: 0; top: 0;
     min-width: 100%;
     height: 100%;
   }
