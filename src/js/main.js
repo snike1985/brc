@@ -1,4 +1,3 @@
-//= other.js
 //= menu.js
 //= header.js
 //= weather.js
@@ -14,9 +13,7 @@ const base = {
             new Menu(obj);
         });
     },
-    _script() {
-        console.log('...script is working');
-    },
+
     _parallax() {
         const timeline = new TimelineMax();
         const paralaxElem = document.getElementById('hero-title');
@@ -40,7 +37,6 @@ const base = {
     init() {
         this._header();
         this._menu();
-        this._script();
         this._parallax();
     }
 }
