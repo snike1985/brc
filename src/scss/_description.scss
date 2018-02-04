@@ -1,0 +1,62 @@
+.description {
+  display: block;
+  position: relative;
+  min-height: 180px;
+  padding: 10px 50px;
+  font-size: 15.594px;
+  color: rgb(0, 0, 0);
+  line-height: 1.364;
+  font-weight: 400;
+
+  &.white {
+    color: rgb(255,255,255);
+
+    .description__title,
+    h2 { color: rgb(255,255,255) }
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 11px;
+    width: 14px;
+    height: 100%;
+    background-color: #997337;
+    content: '';
+  }
+
+  &__title,
+  h2 {
+    display: block;
+    font-size: 44px;
+    color: rgb(87, 45, 29);
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 300;
+  }
+
+  p {
+
+  }
+}
+@media (min-width: $phone-landscape) {
+  .description {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .description {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .description {
+
+  }
+}
+@media (min-width: $desktop) {
+  .description {
+
+  }
+}
+

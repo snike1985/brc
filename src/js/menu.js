@@ -3,6 +3,7 @@ class Menu {
     constructor(obj) {
         this.obj = obj;
         this.btn = document.getElementsByClassName('menu-btn')[0];
+        this.scrollContainer = document.getElementsByTagName('html')[0];
 
         this.onEvents();
     }
