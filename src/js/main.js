@@ -19,19 +19,20 @@ const base = {
        });
     },
     _para() {
+        console.log('...scroll event inited');
         const hero = document.querySelector('.hero');
         const title = hero.querySelector('.hero__title');
 
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', (e) => {
             console.log('...scrolled');
-            const wScroll = window.scrollTop;
-            let newposition = (wScroll * 0.35),
-                newpositionTitle = (wScroll * 0.7),
-                heightOfTitle = hero.innerHeight - title.innerHeight - 100;
-
-            if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
-                title.style.transform = 'translateY(' + newpositionTitle + '%)';
-            }
+            // const wScroll = window.scrollTop;
+            // let newposition = (wScroll * 0.35),
+            //     newpositionTitle = (wScroll * 0.7),
+            //     heightOfTitle = hero.innerHeight - title.innerHeight - 100;
+            //
+            // if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
+            //     title.style.transform = 'translateY(' + newpositionTitle + '%)';
+            // }
         })
     },
     _parallax() {
@@ -56,7 +57,7 @@ const base = {
     },
     init() {
         this._header();
-        //this._menu();
+        this._menu();
         this._para();
         //this._parallax();
     }
