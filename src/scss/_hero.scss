@@ -2,6 +2,7 @@
   overflow: hidden;
   position: relative;
   height: 100vh;
+  max-height: 100vw;
   z-index: 1;
 
   > img {
