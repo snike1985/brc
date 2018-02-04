@@ -18,14 +18,9 @@ const base = {
         console.log('...script is working');
     },
     _parallax() {
-        // var myScroll = new IScroll('.site', {
-        //     mouseWheel: true,
-        //     scrollbars: true
-        // });
-
         const timeline = new TimelineMax();
         const paralaxElem = document.getElementById('hero-title');
-        console.log(paralaxElem);
+
         timeline.to(paralaxElem, 1, {y: 100});
 
         const controller = new ScrollMagic.Controller();
