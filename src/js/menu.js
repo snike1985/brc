@@ -10,6 +10,7 @@ class Menu {
 
     onEvents() {
         this.btn.addEventListener('click', () => {
+
             this.scrollContainer.classList.toggle('menu-active');
             return false;
         });

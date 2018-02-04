@@ -3,6 +3,7 @@ console.clear();
 //= header.js
 // weather.js
 
+'use strict';
 const base = {
     _header() {
         const header = document.querySelectorAll('.header');
@@ -15,10 +16,11 @@ const base = {
         [...menu].forEach(obj => new Menu(obj));
     },
     _para() {
+        console.log('...scroll event inited');
         const hero = document.querySelector('.hero');
         const title = hero.querySelector('.hero__title');
 
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll',function(e) {
             console.log('...scrolled');
             const wScroll = window.scrollTop;
             let newposition = (wScroll * 0.35),
