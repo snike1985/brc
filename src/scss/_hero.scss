@@ -1,20 +1,13 @@
 .hero {
+  overflow: hidden;
   position: relative;
   min-height: 300px;
   padding-top: calc(100%*1240/1919);
-  background-image: url("../img/hero-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
 
-  &__title {
-    @include absoluteCenterX();
-    top: 300px;
-    font-size: 150px;
-    text-shadow: 0 0 10px #000;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fff;
+  img {
+    @include absoluteCenter();
+    min-width: 100%;
+    height: 100%;
   }
 }
 @media (min-width: $phone-landscape) {
