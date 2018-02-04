@@ -1,7 +1,7 @@
 class Header {
 
     constructor(obj) {
-        this.obj = document.querySelector(obj);
+        this.obj = obj;
         this.scrollContainer = document.getElementsByTagName('html')[0];
         this.lastScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
