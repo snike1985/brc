@@ -1,19 +1,39 @@
+console.clear();
 //= menu.js
 //= header.js
-//= weather.js
+// weather.js
 
 const base = {
     _header() {
-        new Header('.header');
+        const header = document.querySelectorAll('.header');
+
+        [...header].forEach((obj) => {
+            new Header(obj);
+        });
     },
     _menu() {
         const menu = document.querySelectorAll('.menu');
 
-        menu.forEach((obj) => {
-            new Menu(obj);
-        });
+       [...menu].forEach((obj) => {
+           new Menu(obj);
+       });
     },
+    _para() {
+        const hero = document.querySelector('.hero');
+        const title = hero.querySelector('.hero__title');
 
+        window.addEventListener('scroll', () => {
+            console.log('...scrolled');
+            const wScroll = window.scrollTop;
+            let newposition = (wScroll * 0.35),
+                newpositionTitle = (wScroll * 0.7),
+                heightOfTitle = hero.innerHeight - title.innerHeight - 100;
+
+            if(window.scrollTop <= heightOfTitle && window.innerWidth > 870) {
+                title.style.transform = 'translateY(' + newpositionTitle + '%)';
+            }
+        })
+    },
     _parallax() {
         const timeline = new TimelineMax();
         const paralaxElem = document.getElementById('hero-title');
@@ -36,8 +56,9 @@ const base = {
     },
     init() {
         this._header();
-        this._menu();
-        this._parallax();
+        //this._menu();
+        this._para();
+        //this._parallax();
     }
 }
 
