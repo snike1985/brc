@@ -40,16 +40,13 @@ const base = {
         windowElement.addEventListener('scroll', (e) => {
 
             const wScroll = windowElement.scrollTop;
-            
+
             let newposition = wScroll * 0.35,
                 newpositionTitle = wScroll * 0.7,
                 heightOfTitle = hero.offsetHeight - title.offsetHeight - 100;
 
             if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
-                title.style.transform = 'translateY(' + newpositionTitle + '%)';
-
-            } else {
-                console.log('...else')
+            //    title.style.transform = 'translateY(' + newpositionTitle + '%)';
             }
         })
     },
