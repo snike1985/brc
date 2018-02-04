@@ -34,7 +34,7 @@ const base = {
     _para() {
         const windowElement = document.body;
         const hero = document.querySelector('.hero');
-        const title = hero.querySelector('.hero__title');
+        const image = hero.querySelector('img');
 
 
         windowElement.addEventListener('scroll', (e) => {
@@ -42,11 +42,11 @@ const base = {
             const wScroll = windowElement.scrollTop;
 
             let newposition = wScroll * 0.35,
-                newpositionTitle = wScroll * 0.7,
-                heightOfTitle = hero.offsetHeight - title.offsetHeight - 100;
-
+                newpositionTitle = wScroll * 0.25,
+                heightOfTitle = hero.offsetHeight - image.offsetHeight - 100;
+                image.style.transform = 'translateY(' + newpositionTitle + 'px)';
             if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
-            //    title.style.transform = 'translateY(' + newpositionTitle + '%)';
+
             }
         })
     },
