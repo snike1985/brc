@@ -1,0 +1,164 @@
+.footer {
+  text-align: center;
+
+  &__top {
+    position: relative;
+    padding: 40px 20px;
+    
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      padding-top: calc(100%*1645/1919);
+      background-image: url("../img/footer-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      content: '';
+    }
+
+    .inner {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    a,
+    a:visited {
+      margin: 10px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      line-height: 1.611;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.219;
+
+    span {
+      padding: 8px;
+      font-weight: 600;
+    }
+
+    a,
+    a:visited {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  &__logo {
+    @include absoluteCenterX();
+    top: -26px;
+    z-index: 2;
+
+    img {
+      display: block;
+      width: 70px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 46px 0 30px;
+    background-color: #000;
+
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 14px;
+      width: 100%;
+      z-index: 1;
+      background-color: #92703c;
+      content: '';
+    }
+
+    &:after {
+      @include absoluteCenterX();
+      top: 2px;
+      height: 14px;
+      width: 66px;
+      z-index: 1;
+      background-color: #000;
+      content: '';
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .footer {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .footer {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .footer {
+    padding: 0;
+
+    &__top { padding: 75px 0 }
+
+    &__menu {
+      margin-bottom: 45px;
+
+      a,
+      a:visited {
+        margin: 0 32px;
+        font-size: 14px;
+      }
+    }
+
+    &__address {
+      font-size: 18.51px;
+
+      span {
+        position: relative;
+        padding: 11px 12px;
+
+        &:before {
+          @include absoluteCenterY();
+          left: -2px;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #fff;
+          content: '';
+        }
+
+        &:first-child:before { display: none }
+      }
+    }
+
+    &__bottom { padding: 66px 0 50px }
+  }
+}
+@media (min-width: $desktop) {
+  .footer {
+
+  }
+}
+

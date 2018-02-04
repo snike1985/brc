@@ -1,0 +1,30 @@
+.site {
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+}
+@media (min-width: $phone-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $desktop) {
+  .site {
+
+    &_main {
+      top: 77px;
+    }
+  }
+}
+

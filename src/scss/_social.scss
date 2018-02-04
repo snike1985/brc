@@ -1,0 +1,60 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #8a4b00;
+    transition: background .3s ease-in-out;
+
+    svg {
+      @include absoluteCenter();
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+    
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .social {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .social {
+    margin-bottom: 46px;
+
+    &__item {
+      width: 66px;
+      height: 66px;
+      margin: 0 13px;
+
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .social {
+
+  }
+}
+@media (min-width: $desktop) {
+  .social {
+
+  }
+}
+

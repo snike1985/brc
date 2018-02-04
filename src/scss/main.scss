@@ -9,18 +9,21 @@
 @import "grid";
 @import "image";
 
-//Templates
-@import "./templates/TMP-main-title";
-@import "./templates/TMP-main-featured";
+@import "btn";
+@import "site";
 
 //Templates
 @import "./templates/TMP-main-title";
+@import "./templates/TMP-main-featured";
 
 @import "navigation";
 @import "logo";
 @import "menu";
 @import "weather";
 @import "header";
+@import "footer";
+@import "social";
+@import "awards";
 @import "hero";
 @import "logos";
 @import "btn";
