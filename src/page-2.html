@@ -5,7 +5,7 @@
         @@include('./view/components/head.html')
     </head>
     <body>
-        <!-- @@include('./view/templates/navigation.html') -->
+        @@include('./view/templates/navigation.html')
 
         <main class="site">
             @@include('./view/templates/header.html')
@@ -20,7 +20,7 @@
                 "p": "Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your unforgettable adventure."
             })
 
-            <section data-template="slider">
+            <div data-template="slider">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -39,9 +39,42 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 <div class="swiper-pagination"></div>
-            </section>
+                </div>
+            </div>
+
+            <div class="slider-description">
+                <div class="item">
+                    <div class="image">
+                        <img src="./img/logos/logos1.svg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-description-text">
+                        <div class="title">
+                            <h2>lodging for all</h2>
+                        </div>
+                        <div class="inner">
+                            <div data-widget="text">
+                                <p><strong>Feel the Spirit of the West</strong></p>
+                                <br>
+                                <br>
+                                <p>Log cabins and lodges outfitted with modern amenities and lavish <br> accents deliver the ultimate in comfort and provide a rustically <br> elegant setting for your unforgettable adventure. </p>
+                                <br>
+                                <p>Room types:</p>
+                                <ul>
+                                    <li>Lodge Rooms</li>
+                                    <li>Cabin Suites
+                                    <li>Cabin Residence</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn">view all</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
             <script src="js/main.js" charset="utf-8"></script>
         </main>
     </body>

@@ -12,10 +12,6 @@
 @import "btn";
 @import "site";
 
-//Templates
-@import "./templates/TMP-main-title";
-@import "./templates/TMP-main-featured";
-@import "./templates/TMP-slider";
 
 @import "navigation";
 @import "logo";
@@ -32,3 +28,8 @@
 @import "map";
 @import "movie";
 @import "image-container";
+
+//Templates
+@import "./templates/TMP-main-title";
+@import "./templates/TMP-main-featured";
+@import "./templates/TMP-slider";

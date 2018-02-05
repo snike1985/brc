@@ -73,25 +73,16 @@ const base = {
         });
     },
     _slider(){
-
-    //     var swiper = new Swiper('.swiper-container', {
-    //   direction: 'vertical',
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //   },
-    // });
         const sliders = document.querySelectorAll('[data-template="slider"]');
 
         [...sliders].forEach(slider => {
             const sliderInit = slider.firstElementChild;
             const mySwiper = new Swiper(sliderInit, {
-                loop: false,
-                direction: 'vertical',
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true,
+                    clickable: true
                 },
+                speed: 600
             })
         })
     },
