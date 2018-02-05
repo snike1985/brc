@@ -1,8 +1,8 @@
 console.clear();
 //= menu.js
 //= header.js
-//= smooth-scroll.js
-// weather.js
+// smooth-scroll.js
+//= weather.js
 
 
 'use strict';
@@ -27,7 +27,7 @@ const base = {
 
         windowElement.addEventListener('scroll', (e) => {
 
-            const wScroll = windowElement.scrollTop;
+            const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             let newposition = wScroll * 0.35,
                 newpositionTitle = wScroll * 0.25,
@@ -39,37 +39,33 @@ const base = {
         })
     },
     _parallaxImageBg() {
-        const windowElement = document.body;
-        const hero = document.querySelectorAll('.image-container');
+        const body = document.body;
         const moveElem = document.querySelectorAll('.image-container__bg');
 
         moveElem.forEach(function (curElem) {
             const curParent = curElem.parentElement;
 
-            windowElement.addEventListener('scroll', (e) => {
+            window.addEventListener('scroll', (e) => {
 
-                const wScroll = windowElement.scrollTop - windowElement.clientHeight;
+                const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
                 const c = curParent.getBoundingClientRect();
-                const elemScrollTop = windowElement.scrollTop + c.top;
-                let newposition = elemScrollTop + windowElement.clientHeight - windowElement.scrollTop;
+                const elemScrollTop = wScroll + c.top;
 
-                // curElem.style.transform = 'translateY(' + newposition + 'px)';
-                curElem.style.opacity = (windowElement.scrollTop - windowElement.clientHeight*0.75)/elemScrollTop;
+                curElem.style.opacity = (wScroll - body.clientHeight*0.5)/elemScrollTop;
             })
         });
 
     },
     _animation() {
-        const windowElement = document.body;
+        const body = document.body;
         const elems = document.querySelectorAll('.animation');
 
         elems.forEach(function (curElem) {
 
-            windowElement.addEventListener('scroll', (e) => {
-
-                const wScroll = windowElement.scrollTop + windowElement.clientHeight;
+            window.addEventListener('scroll', (e) => {
+                const wScroll = body.scrollTop + body.clientHeight;
                 const c = curElem.getBoundingClientRect();
-                const elemScrollTop = windowElement.scrollTop + c.top;
+                const elemScrollTop = body.scrollTop + c.top;
 
                 if (wScroll > elemScrollTop) {
                     curElem.classList.add('show');
@@ -77,28 +73,15 @@ const base = {
             })
         });
     },
-    _parallax() {
-        const timeline = new TimelineMax();
-        const hero = document.querySelector('.hero');
-        const image = hero.querySelector('img');
-
-        timeline.to(image, 1, {y: 100});
-
-        const controller = new ScrollMagic.Controller();
-        const scene = new ScrollMagic.Scene({
-            duration: '50%', // duration in px eg. 300, 0 = autoplay
-            // duration: '100%', // resposive duration in %
-            offset: 100, // offset trigger position by 100px
-            triggerElement: hero, // what will trigger scene
-            triggerHook: 0
-        });
-        // scene.setTween(timeline);
-        scene.addIndicators({ name: 'Blah Bla Bla' });
-        scene.setTween(timeline);
-        // scene.setPin('.hero');
-        scene.addTo(controller);
-    },
     _slider(){
+
+    //     var swiper = new Swiper('.swiper-container', {
+    //   direction: 'vertical',
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //   },
+    // });
         const sliders = document.querySelectorAll('[data-template="slider"]');
 
         [...sliders].forEach(slider => {
@@ -114,13 +97,12 @@ const base = {
         })
     },
     init() {
+        this._slider();
         this._header();
         this._menu();
         this._animation();
         this._parallaxHero();
         this._parallaxImageBg();
-        // this._parallax();
-        this._slider();
     }
 }
 

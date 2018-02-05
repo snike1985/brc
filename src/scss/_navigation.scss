@@ -21,9 +21,14 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 0.903;
-    transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
 
-    &:hover { background-color: rgba(255, 255, 255, 1) }
+    &:hover {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 20px rgba(0,0,0, .5);
+    }
 
     &-icon {
       display: flex;

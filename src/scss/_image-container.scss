@@ -5,25 +5,14 @@
 
   &.type_1 {
 
-    > .description {
-      top: auto;
-      bottom: 18.7%;
-    }
   }
 
   &.type_2 {
 
-    > .description {
-      top: 50%;
-    }
   }
 
   &.type_3 {
     margin-bottom: -10vw;
-
-    > .description {
-
-    }
   }
 
   &__bg {
@@ -37,17 +26,18 @@
     z-index: 1;
   }
 
-  > .description {
-    position: absolute;
-    top: 200px;
-    left: 13px;
+  > .movie {
+    position: relative;
+    margin-bottom: -220px;
     z-index: 1;
   }
 
-  > .movie {
-    position: relative;
-    margin-bottom: -400px;
-    z-index: 1;
+  > .description_white {
+    margin: 0 20px;
+    color: rgb(0, 0, 0);
+
+    .description__title,
+    h2 { color: rgb(87, 45, 29) }
   }
 
   &__mask {
@@ -65,7 +55,7 @@
 
   > .logos {
     position: relative;
-    margin-bottom: -26vh;
+    margin-bottom: -20vh;
     z-index: 1;
   }
 }
@@ -77,6 +67,58 @@
 @media (min-width: $tablet-portrait) {
   .image-container {
 
+    &.type_1 {
+
+      > .description {
+        top: auto;
+        bottom: 8.7%;
+      }
+    }
+
+    &.type_2 {
+      margin-bottom: 49px;
+
+      > .description {
+        top: 50%;
+      }
+    }
+
+    &.type_3 {
+      margin-bottom: -10vw;
+      margin-bottom: -14vh;
+
+      > .description {
+
+      }
+    }
+
+    .movie {
+      margin-bottom: -340px;
+    }
+
+    > .conditions {
+      margin-bottom: -84px;
+    }
+
+    > .description_white {
+      margin: 0;
+      color: rgb(255, 255, 255);
+
+      .description__title,
+      h2 { color: rgb(255, 255, 255) }
+    }
+
+    > .description {
+      position: absolute;
+      top: 10vw;
+      left: 20px;
+      max-width: 480px;
+      z-index: 1;
+    }
+
+    .logos {
+      margin-bottom: -200px;
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -87,6 +129,29 @@
 @media (min-width: $desktop) {
   .image-container {
     margin-bottom: 124px;
+
+    &.type_1 {
+
+      > .description {
+        top: auto;
+        bottom: 18.7%;
+      }
+    }
+
+    &.type_2 {
+
+      > .description {
+        top: 50%;
+      }
+    }
+
+    &.type_3 {
+      margin-bottom: -10vw;
+
+      > .description {
+
+      }
+    }
 
     &.type_1 {
 
@@ -106,6 +171,14 @@
 
     > .conditions {
       margin-bottom: -84px;
+    }
+
+    > .description_white {
+      margin: 0;
+      color: rgb(255, 255, 255);
+
+      .description__title,
+      h2 { color: rgb(255, 255, 255) }
     }
 
     > .description {
