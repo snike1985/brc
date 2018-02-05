@@ -1,5 +1,6 @@
 [data-template="slider"] {
     @extend %inner;
+    margin-bottom: 200px;
 
     .swiper {
         &-container {

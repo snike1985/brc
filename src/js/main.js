@@ -86,11 +86,11 @@ const base = {
         [...sliders].forEach(slider => {
             const sliderInit = slider.firstElementChild;
             const mySwiper = new Swiper(sliderInit, {
-                loop: false,
-                direction: 'vertical',
+                // loop: false,
+                // direction: 'vertical',
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true,
+                    // clickable: true,
                 },
             })
         })
