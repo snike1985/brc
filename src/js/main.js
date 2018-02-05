@@ -42,9 +42,10 @@ const base = {
         elems.forEach(function (curElem) {
 
             windowElement.addEventListener('scroll', (e) => {
-                
-                const wScroll = windowElement.scrollTop - windowElement.clientHeight*1.5;
-                const elemScrollTop = $(curElem).offset().top;
+
+                const wScroll = windowElement.scrollTop + windowElement.clientHeight;
+                const c = curElem.getBoundingClientRect();
+                const elemScrollTop = windowElement.scrollTop + c.top;
                 
                 if (wScroll > elemScrollTop) {
                     curElem.classList.add('show');

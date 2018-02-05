@@ -19,6 +19,7 @@
   }
 
   &.type_3 {
+    margin-bottom: -15px;
 
     > .description {
 
@@ -42,7 +43,7 @@
   }
 
   > .movie {
-    margin-bottom: 80px;
+    margin-bottom: -400px;
   }
 
   &__mask {
@@ -87,11 +88,15 @@
     }
 
     &.type_2 {
-      margin-bottom: 60px;
+      margin-bottom: 49px;
+    }
+
+    &.type_3 {
+      margin-bottom: -37px;
     }
 
     .movie {
-      margin-bottom: 166px;
+      margin-bottom: -721px;
     }
 
     > .conditions {
