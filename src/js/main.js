@@ -24,7 +24,7 @@ const base = {
 
         windowElement.addEventListener('scroll', (e) => {
 
-            const wScroll = windowElement.scrollTop;
+            const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             let newposition = wScroll * 0.35,
                 newpositionTitle = wScroll * 0.25,
@@ -36,38 +36,34 @@ const base = {
         })
     },
     _parallaxImageBg() {
-        const windowElement = document.body;
-        const hero = document.querySelectorAll('.image-container');
+        const body = document.body;
         const moveElem = document.querySelectorAll('.image-container__bg');
 
         moveElem.forEach(function (curElem) {
             const curParent = curElem.parentElement;
 
-            windowElement.addEventListener('scroll', (e) => {
+            window.addEventListener('scroll', (e) => {
 
-                const wScroll = windowElement.scrollTop - windowElement.clientHeight;
+                const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
                 const c = curParent.getBoundingClientRect();
-                const elemScrollTop = windowElement.scrollTop + c.top;
-                let newposition = elemScrollTop + windowElement.clientHeight - windowElement.scrollTop;
-
-                // curElem.style.transform = 'translateY(' + newposition + 'px)';
-                curElem.style.opacity = (windowElement.scrollTop - windowElement.clientHeight*0.75)/elemScrollTop;
+                const elemScrollTop = wScroll + c.top;
+                
+                curElem.style.opacity = (wScroll - body.clientHeight*0.5)/elemScrollTop;
             })
         });
 
     },
     _animation() {
-        const windowElement = document.body;
+        const body = document.body;
         const elems = document.querySelectorAll('.animation');
         
         elems.forEach(function (curElem) {
 
-            windowElement.addEventListener('scroll', (e) => {
-
-                const wScroll = windowElement.scrollTop + windowElement.clientHeight;
+            window.addEventListener('scroll', (e) => {
+                const wScroll = body.scrollTop + body.clientHeight;
                 const c = curElem.getBoundingClientRect();
-                const elemScrollTop = windowElement.scrollTop + c.top;
-                
+                const elemScrollTop = body.scrollTop + c.top;
+
                 if (wScroll > elemScrollTop) {
                     curElem.classList.add('show');
                 }
