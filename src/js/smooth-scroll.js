@@ -1,7 +1,7 @@
 $(function(){
 	var target = $(document.body);
-	var scrollTime = 0.35;
-	var scrollDistance = 170;
+	var scrollTime = 0.5;
+	var scrollDistance = 125;
 	 $(window).on("mousewheel DOMMouseScroll", function(event){
 		event.preventDefault();
 		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;

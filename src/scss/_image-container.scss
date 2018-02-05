@@ -1,0 +1,57 @@
+.image-container {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &__wrap {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .description {
+      position: absolute;
+      top: 200px;
+      left: 13px;
+      z-index: 1;
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .image-container {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .image-container {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .image-container {
+
+  }
+}
+@media (min-width: $desktop) {
+  .image-container {
+
+  }
+}
+

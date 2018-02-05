@@ -2,24 +2,25 @@
   margin-bottom: 30px;
 
   &__list {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 8px;
   }
 
   &__item {
-    width: 50%;
     padding: 0 5px;
+    margin-bottom: 30px;
   }
 
   &__pic {
     display: block;
     padding-top: 65.66666%;
-    margin-bottom: 38px;
+    margin-bottom: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .description {
+    max-width: 100%;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -29,7 +30,28 @@
 }
 @media (min-width: $tablet-portrait) {
   .conditions {
+    margin-bottom: 30px;
 
+    &__list {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+
+    &__item {
+      width: 50%;
+      padding: 0 5px;
+    }
+
+    &__pic {
+      display: block;
+      padding-top: 65.66666%;
+      margin-bottom: 38px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 @media (min-width: $tablet-landscape) {

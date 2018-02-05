@@ -2,8 +2,9 @@
   display: block;
   position: relative;
   min-height: 100px;
-  padding: 10px 30px;
-  font-size: 12px;
+  max-width: 340px;
+  padding: 0 25px;
+  font-size: 10px;
   color: rgb(0, 0, 0);
   line-height: 1.364;
   font-weight: 400;
@@ -20,7 +21,7 @@
     position: absolute;
     top: 0;
     left: 8px;
-    width: 11px;
+    width: 8px;
     height: 100px;
     background-color: #997337;
     content: '';
@@ -29,7 +30,7 @@
   &__title,
   h2 {
     display: block;
-    font-size: 32px;
+    font-size: 28px;
     color: rgb(87, 45, 29);
     text-transform: uppercase;
     line-height: 1.2;
@@ -46,6 +47,11 @@
   }
 }
 @media (min-width: $tablet-portrait) {
+  .description {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
   .description {
     display: block;
     position: relative;
@@ -88,11 +94,6 @@
     p {
 
     }
-  }
-}
-@media (min-width: $tablet-landscape) {
-  .description {
-
   }
 }
 @media (min-width: $desktop) {
