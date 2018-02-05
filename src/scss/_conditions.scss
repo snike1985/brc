@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 
   &__list {
-    padding: 0 8px;
+    padding: 0 5px;
   }
 
   &__item {
@@ -12,7 +12,7 @@
 
   &__pic {
     display: block;
-    padding-top: 65.66666%;
+    padding-top: 66.9%;
     margin-bottom: 20px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,21 +36,14 @@
       display: flex;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 8px;
     }
 
     &__item {
       width: 50%;
-      padding: 0 5px;
     }
 
     &__pic {
-      display: block;
-      padding-top: 65.66666%;
       margin-bottom: 38px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
     }
   }
 }

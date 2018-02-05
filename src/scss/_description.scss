@@ -1,4 +1,5 @@
 .description {
+  overflow: hidden;
   display: block;
   position: relative;
   min-height: 100px;
@@ -6,8 +7,8 @@
   padding: 0 25px;
   font-size: 10px;
   color: rgb(0, 0, 0);
-  line-height: 1.364;
-  font-weight: 400;
+  line-height: 1.44;
+  font-weight: 600;
   text-align: left;
 
   &.description_white {
@@ -15,6 +16,30 @@
 
     .description__title,
     h2 { color: rgb(255,255,255) }
+  }
+
+  &.animation {
+    opacity: 0;
+  }
+
+  &.show {
+    opacity: 1;
+    animation: opacityShow 1.3s ease-in-out;
+
+    &:after {
+      animation: show 1.3s ease-in-out;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #997337;
+    transform: translate(-100%, 0);
+    content: '';
   }
 
   &:before {
@@ -30,11 +55,13 @@
   &__title,
   h2 {
     display: block;
+    margin-bottom: 17px;
     font-size: 28px;
+    letter-spacing: 3.3px;
     color: rgb(87, 45, 29);
     text-transform: uppercase;
     line-height: 1.2;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   p {
@@ -53,42 +80,20 @@
 }
 @media (min-width: $tablet-landscape) {
   .description {
-    display: block;
-    position: relative;
-    min-height: 180px;
+    min-height: 158px;
     max-width: 600px;
-    padding: 10px 50px;
+    padding: 0 45px;
     font-size: 15.594px;
-    color: rgb(0, 0, 0);
-    line-height: 1.364;
-    font-weight: 400;
-    text-align: left;
-
-    &.description_white {
-      color: rgb(255,255,255);
-
-      .description__title,
-      h2 { color: rgb(255,255,255) }
-    }
 
     &:before {
-      position: absolute;
-      top: 0;
       left: 11px;
       width: 14px;
-      height: 180px;
-      background-color: #997337;
-      content: '';
+      height: 158px;
     }
 
     &__title,
     h2 {
-      display: block;
-      font-size: 44px;
-      color: rgb(87, 45, 29);
-      text-transform: uppercase;
-      line-height: 1.2;
-      font-weight: 300;
+      font-size: 46px;
     }
 
     p {
@@ -99,6 +104,21 @@
 @media (min-width: $desktop) {
   .description {
 
+  }
+}
+
+@keyframes opacityShow {
+  0%   {opacity: 0;}
+  50%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes show {
+  0%   {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
   }
 }
 

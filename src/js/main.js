@@ -35,6 +35,23 @@ const base = {
             }
         })
     },
+    _animation() {
+        const windowElement = document.body;
+        const elems = document.querySelectorAll('.animation');
+        
+        elems.forEach(function (curElem) {
+
+            windowElement.addEventListener('scroll', (e) => {
+                
+                const wScroll = windowElement.scrollTop - windowElement.clientHeight*1.5;
+                const elemScrollTop = $(curElem).offset().top;
+                
+                if (wScroll > elemScrollTop) {
+                    curElem.classList.add('show');
+                }
+            })
+        });
+    },
     _parallax() {
         const timeline = new TimelineMax();
         const hero = document.querySelector('.hero');
@@ -59,6 +76,7 @@ const base = {
     init() {
         this._header();
         this._menu();
+        this._animation();
         this._parallaxHero();
         // this._parallax();
     }
