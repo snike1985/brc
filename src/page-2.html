@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Page_2</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        @@include('./view/templates/navigation.html')
+
+        <main class="site">
+            @@include('./view/templates/header.html')
+
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/accomodations-hero.png"
+            })
+            
+            @@include('./view/components/main-title.html', {
+                "h2": "accomodations",
+                "h3": "luxury",
+                "p": "Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your unforgettable adventure."
+            })
+
+            <section data-template="slider">
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </section>
+            <script src="js/main.js" charset="utf-8"></script>
+        </main>
+    </body>
+</html>

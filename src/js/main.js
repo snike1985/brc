@@ -10,7 +10,10 @@ const base = {
     _header() {
         const header = document.querySelectorAll('.header');
 
-        [...header].forEach(obj => new Header(obj));
+        if(header) {
+            [...header].forEach(obj => new Header(obj));
+        }
+
     },
     _menu() {
         const menu = document.querySelectorAll('.menu');
@@ -95,6 +98,29 @@ const base = {
         // scene.setPin('.hero');
         scene.addTo(controller);
     },
+    _slider(){
+        const sliders = document.querySelectorAll('[data-template="slider"]');
+
+        [...sliders].forEach(slider => {
+            console.log(slider);
+            const mySwiper = new Swiper ('.swiper-container', {
+                direction: 'vertical',
+                loop: true,
+                pagination: {
+                  el: '.swiper-pagination',
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                  el: '.swiper-scrollbar',
+                },
+            })
+        })
+
+
+    },
     init() {
         this._header();
         this._menu();
@@ -102,6 +128,7 @@ const base = {
         this._parallaxHero();
         this._parallaxImageBg();
         // this._parallax();
+        this._slider();
     }
 }
 
