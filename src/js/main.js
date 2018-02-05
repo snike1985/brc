@@ -1,7 +1,7 @@
 console.clear();
 //= menu.js
 //= header.js
-//= smooth-scroll.js
+// smooth-scroll.js
 //= weather.js
 
 
@@ -74,34 +74,12 @@ const base = {
             })
         });
     },
-    _parallax() {
-        const timeline = new TimelineMax();
-        const hero = document.querySelector('.hero');
-        const image = hero.querySelector('img');
-
-        timeline.to(image, 1, {y: 100});
-
-        const controller = new ScrollMagic.Controller();
-        const scene = new ScrollMagic.Scene({
-            duration: '50%', // duration in px eg. 300, 0 = autoplay
-            // duration: '100%', // resposive duration in %
-            offset: 100, // offset trigger position by 100px
-            triggerElement: hero, // what will trigger scene
-            triggerHook: 0
-        });
-        // scene.setTween(timeline);
-        scene.addIndicators({ name: 'Blah Bla Bla' });
-        scene.setTween(timeline);
-        // scene.setPin('.hero');
-        scene.addTo(controller);
-    },
     init() {
         this._header();
         this._menu();
         this._animation();
         this._parallaxHero();
         this._parallaxImageBg();
-        // this._parallax();
     }
 }
 

@@ -11,10 +11,12 @@ $(function(){
 
         console.log(event, delta, scrollTop, finalScroll);
 
-	 	var tweenMax = new TweenMax.to( _window, scrollTime, {
-			 scrollTo : { y: finalScroll, autoKill:true },
-			 ease: Power1.easeOut,
-			 overwrite: 5
-	 	});
+	 	var tl = new TweenMax();
+
+	 	tl.to( _window, scrollTime, {
+            scrollTo : { y: finalScroll, autoKill:true },
+            ease: Power1.easeOut,
+            overwrite: 5
+        });
 	});
 });

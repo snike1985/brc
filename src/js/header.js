@@ -9,9 +9,10 @@ class Header {
     }
 
     onEvents() {
-        document.body.addEventListener('scroll', () => {
+        window.addEventListener('scroll', () => {
             const curScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
+            console.log('scroll');
             if (curScroll > this.lastScrollTop){
                 this.obj.classList.add('hide');
             } else {

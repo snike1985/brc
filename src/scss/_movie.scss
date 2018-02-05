@@ -1,12 +1,11 @@
 .movie {
-  display: flex;
-  justify-content: space-between;
   width: calc(100% - 40px);
   max-width: 1708px;
   margin: 0 auto;
 
   &__wrap {
     position: relative;
+    margin-bottom: 30px;
 
     img,
     video {
@@ -16,21 +15,28 @@
   }
 
   &__content {
-    @include absoluteCenterX();
-    top: 0;
-    width: calc(100% - 40px);
-    max-width: 1200px;
 
-    .description {
-      position: absolute;
-      top: 200px;
-      right: 13px;
-    }
   }
 }
 @media (min-width: $phone-landscape) {
   .movie {
+    display: flex;
+    justify-content: space-between;
 
+    &__wrap { margin-bottom: 0 }
+
+    &__content {
+      @include absoluteCenterX();
+      top: 0;
+      width: calc(100% - 40px);
+      max-width: 1200px;
+
+      .description {
+        position: absolute;
+        top: 5vw;
+        right: 13px;
+      }
+    }
   }
 }
 @media (min-width: $tablet-portrait) {
