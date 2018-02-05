@@ -35,6 +35,27 @@ const base = {
             }
         })
     },
+    _parallaxImageBg() {
+        const windowElement = document.body;
+        const hero = document.querySelectorAll('.image-container');
+        const moveElem = document.querySelectorAll('.image-container__bg');
+
+        moveElem.forEach(function (curElem) {
+            const curParent = curElem.parentElement;
+
+            windowElement.addEventListener('scroll', (e) => {
+
+                const wScroll = windowElement.scrollTop - windowElement.clientHeight;
+                const c = curParent.getBoundingClientRect();
+                const elemScrollTop = windowElement.scrollTop + c.top;
+                let newposition = elemScrollTop + windowElement.clientHeight - windowElement.scrollTop;
+
+                // curElem.style.transform = 'translateY(' + newposition + 'px)';
+                curElem.style.opacity = (windowElement.scrollTop - windowElement.clientHeight*0.75)/elemScrollTop;
+            })
+        });
+
+    },
     _animation() {
         const windowElement = document.body;
         const elems = document.querySelectorAll('.animation');
@@ -79,6 +100,7 @@ const base = {
         this._menu();
         this._animation();
         this._parallaxHero();
+        this._parallaxImageBg();
         // this._parallax();
     }
 }
