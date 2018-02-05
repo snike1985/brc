@@ -58,6 +58,14 @@
 
       &_fixed { display: block }
     }
+
+    .menu {
+
+      &__item {
+
+        &:before { color: #997337 }
+      }
+    }
   }
 }
 @media (min-width: $phone-landscape) {

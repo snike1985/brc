@@ -139,8 +139,44 @@
     margin: 0 -4px;
 
     &__item {
+      position: relative;
       font-size: 14px;
       letter-spacing: 1px;
+      color: transparent;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #484b49;
+        clip: rect(0, 0, auto, 0);
+        content: attr(data-content);
+        transition: clip .3s ease-in-out;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        clip: rect(0, 150px, auto, 0);
+        content: attr(data-content);
+        transition: clip .3s ease-in-out;
+      }
+
+      &:hover {
+
+        &:before {
+          clip: rect(0, 150px, auto, 0);
+        }
+        &:after {
+          clip: rect(0, 150px, auto, 150px);
+        }
+      }
     }
   }
 }
