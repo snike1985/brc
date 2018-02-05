@@ -1,0 +1,36 @@
+.content {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  line-height: 1.5625;
+
+  h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  p {
+
+  }
+}
+@media (min-width: $phone-landscape) {
+  .content {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .content {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .content {
+
+  }
+}
+@media (min-width: $desktop) {
+  .content {
+
+  }
+}
+

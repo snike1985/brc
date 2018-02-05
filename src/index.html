@@ -6,100 +6,104 @@
 </head>
 <body>
 @@include('./view/templates/navigation.html')
-    <main class="site">
-        @@include('./view/templates/header.html')
-        @@include('./view/templates/hero.html')
-        <div data-template="main-title">
-            <div data-widget="text">
-                <h3>
-                    welcome to
-                </h3>
-                <h2>
-                    The True Spirit of the West
-                </h2>
-                <p>
-                    Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br> located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra Madre Mountain range and stunning Medicine Bow National Forest.
-                </p>
-                <p>
-                    Lorem ipsum dolor <em>sit amet</em>, consectetur adipisicing elit. <br> Cupiditate, ex! Maiores earum placeat nemo sequi, <br> quia maxime libero sit, dolorem?
-                </p>
-            </div>
+<main class="site">
+    @@include('./view/templates/header.html')
+    @@include('./view/templates/hero.html')
+    <div data-template="main-title">
+        <div data-widget="text">
+            <h3>
+                welcome to
+            </h3>
+            <h2>
+                The True Spirit of the West
+            </h2>
+            <p>
+                Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br>
+                located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra
+                Madre Mountain range and stunning Medicine Bow National Forest.
+            </p>
+            <p>
+                Lorem ipsum dolor <em>sit amet</em>, consectetur adipisicing elit. <br> Cupiditate, ex! Maiores earum
+                placeat nemo sequi, <br> quia maxime libero sit, dolorem?
+            </p>
         </div>
-        <!-- image-container -->
-        <div class="image-container type_1">
+    </div>
+    <!-- image-container -->
+    <div class="image-container type_1">
 
-            @@include('./view/templates/logos.html')
+        @@include('./view/templates/logos.html')
 
-            <!-- description -->
-            <div class="description description_white animation">
-                <h2>breathtaking</h2>
-                <p>Connect with an endless expanse of ageless wilderness in ways you never believed were possible.</p>
-            </div>
-            <!-- /description -->
-
-            <img class="image-container__bg" src="img/bg/pic1.jpg" alt="">
-
-            <!-- image-container__mask -->
-            <div class="image-container__mask">
-                <img src="img/masks/mask2.png" alt="">
-            </div>
-            <!-- /image-container__mask -->
-
+        <!-- description -->
+        <div class="description description_white animation">
+            <h2>breathtaking</h2>
+            <p>Connect with an endless expanse of ageless wilderness in ways you never believed were possible.</p>
         </div>
-        <!-- /image-container -->
+        <!-- /description -->
 
-        <!-- image-container -->
-        <div class="image-container type_2">
+        <img class="image-container__bg" src="img/bg/pic1.jpg" alt="">
 
-            <!-- movie -->
-            <div class="movie">
+        <!-- image-container__mask -->
+        <div class="image-container__mask">
+            <img src="img/masks/mask2.png" alt="">
+        </div>
+        <!-- /image-container__mask -->
 
-                <!-- movie__wrap -->
-                <div class="movie__wrap">
-                    <!--<img src="img/bg/pic2.jpg" alt="">-->
-                    <video autoplay loop poster="img/bg/pic2.jpg" >
-                        <source src="video/video1.mp4" type="video/mp4">
-                        Your browser doesn't support HTML5 video tag.
-                    </video>
+    </div>
+    <!-- /image-container -->
+
+    <!-- image-container -->
+    <div class="image-container type_2">
+
+        <!-- movie -->
+        <div class="movie">
+
+            <!-- movie__wrap -->
+            <div class="movie__wrap">
+                <!--<img src="img/bg/pic2.jpg" alt="">-->
+                <video autoplay loop poster="img/bg/pic2.jpg">
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
+            </div>
+            <!-- /movie__wrap -->
+
+            <!-- movie__content -->
+            <div class="movie__content">
+                <!-- description -->
+                <div class="description description_white animation">
+                    <h2>adventure</h2>
+                    <p>An endless array of purely Western excursions allow groups large or small to gather and create
+                        unforgettable memories.</p>
                 </div>
-                <!-- /movie__wrap -->
-
-                <!-- movie__content -->
-                <div class="movie__content">
-                    <!-- description -->
-                    <div class="description description_white animation">
-                        <h2>adventure</h2>
-                        <p>An endless array of purely Western excursions allow groups large or small to gather and create unforgettable memories.</p>
-                    </div>
-                    <!-- /description -->
-                </div>
-                <!-- /movie__content -->
-
+                <!-- /description -->
             </div>
-            <!-- /movie -->
-
-            <img class="image-container__bg" src="img/bg/pic3.jpg" alt="">
-
-            <!-- description -->
-            <div class="description description_white animation">
-                <h2>unmatched</h2>
-                <p>Welcome to pure heaven, born of generations of the finest sporting heritage.</p>
-            </div>
-            <!-- /description -->
+            <!-- /movie__content -->
 
         </div>
-        <!-- /image-container -->
+        <!-- /movie -->
 
-        <!-- image-container -->
-        <div class="image-container type_3">
+        <img class="image-container__bg" src="img/bg/pic3.jpg" alt="">
 
-            @@include('./view/templates/conditions.html')
-
-            <img class="image-container__bg" src="img/bg/pic4.png" alt="">
+        <!-- description -->
+        <div class="description description_white animation">
+            <h2>unmatched</h2>
+            <p>Welcome to pure heaven, born of generations of the finest sporting heritage.</p>
         </div>
-        <!-- /image-container -->
-        @@include('./view/templates/footer_main.html')
-    </main>
-    <script src="js/main.js" charset="utf-8"></script>
+        <!-- /description -->
+
+    </div>
+    <!-- /image-container -->
+
+    <!-- image-container -->
+    <div class="image-container type_3">
+
+        @@include('./view/templates/conditions.html')
+
+        <img class="image-container__bg" src="img/bg/pic4.png" alt="">
+    </div>
+    <!-- /image-container -->
+    @@include('./view/templates/footer_main.html')
+</main>
+<script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
