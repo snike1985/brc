@@ -21,11 +21,10 @@ const base = {
         [...menu].forEach(obj => new Menu(obj));
     },
     _parallaxHero() {
-        const windowElement = document.body;
         const hero = document.querySelector('.hero');
         const moveElem = hero.querySelector('.hero__movie');
 
-        windowElement.addEventListener('scroll', (e) => {
+        window.addEventListener('scroll', (e) => {
 
             const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
