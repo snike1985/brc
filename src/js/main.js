@@ -2,7 +2,7 @@ console.clear();
 //= menu.js
 //= header.js
 //= smooth-scroll.js
-//= weather.js
+// weather.js
 
 
 'use strict';
@@ -102,24 +102,16 @@ const base = {
         const sliders = document.querySelectorAll('[data-template="slider"]');
 
         [...sliders].forEach(slider => {
-            console.log(slider);
-            const mySwiper = new Swiper ('.swiper-container', {
+            const sliderInit = slider.firstElementChild;
+            const mySwiper = new Swiper(sliderInit, {
+                loop: false,
                 direction: 'vertical',
-                loop: true,
                 pagination: {
-                  el: '.swiper-pagination',
-                },
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-                scrollbar: {
-                  el: '.swiper-scrollbar',
+                    el: '.swiper-pagination',
+                    clickable: true,
                 },
             })
         })
-
-
     },
     init() {
         this._header();
