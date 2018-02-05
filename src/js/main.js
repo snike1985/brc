@@ -30,7 +30,7 @@ const base = {
                 newpositionTitle = wScroll * 0.25,
                 heightOfTitle = hero.offsetHeight - image.offsetHeight - 100;
                 image.style.transform = 'translateY(-' + newpositionTitle + 'px)';
-            if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
+            if(wScroll <= heightOfTitle && document.body.offsetHeight > 668) {
 
             }
         })
