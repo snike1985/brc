@@ -1,10 +1,22 @@
 .footer {
   text-align: center;
 
+    &[data-footer="accomodations"] {
+        .footer__top {
+            &:after {
+                background-image: url("../img/footer-bg-2.jpg");
+
+                @media(max-width: $phone-landscape) {
+                  background-image: url("../img/footer-bg.jpg");
+                }
+            }
+        }
+    }
+
   &__top {
     position: relative;
     padding: 25vw 20px 40px;
-    
+
     &:after {
       position: absolute;
       bottom: 0;
@@ -14,10 +26,14 @@
       z-index: -1;
       padding-top: calc(100%*1645/1919);
       background-image: url("../img/footer-bg.jpg");
+
+
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center bottom;
       content: '';
+
+
     }
 
     .inner {
@@ -177,4 +193,3 @@
 
   }
 }
-

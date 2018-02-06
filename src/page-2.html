@@ -7,7 +7,7 @@
     <body>
         @@include('./view/templates/navigation.html')
 
-        <main class="site">
+        <main class="site accomodations">
             @@include('./view/templates/header.html')
 
             @@include('./view/templates/hero2.html', {
@@ -68,9 +68,13 @@
                 "title": "KING OF THE CASTLE",
                 "inner": "<p>Up to 10 guests in a single party will have exclusive access to the ultra-secluded <br>Sportsman’s Club with four private luxury log cabins perched on French Creek, enjoying unlimited access to the notable sporting experiences it affords.<br><br><ul><li>Millies Cabin Residence</li><li>Jenkins Cabin Suite</li><li>Barkus Cabin Suite</li><li>Bennet Cabin Suite</li></ul>"
             })
+
+            @@include('./view/templates/footer-title.html')
         </main>
 
-        @@include('./view/templates/footer.html')
+        @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+        })
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>

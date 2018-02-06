@@ -1,0 +1,21 @@
+[data-template="footer-title"] {
+    @extend %inner;
+
+    text-align: center;
+    padding: 2.813rem 2rem 5.5rem;
+
+    color: var(--white);
+
+    @media(max-width: 668px) {
+        background-color: #f2f2f2;
+        color: var(--black);
+    }
+
+
+    .title {
+        @extend %Title;
+
+        font-size: 3.75rem;
+        font-weight: 400;
+    }
+}
