@@ -1,7 +1,7 @@
 console.clear();
 //= menu.js
 //= header.js
-// smooth-scroll.js
+//= smooth-scroll.js
 //= weather.js
 
 
