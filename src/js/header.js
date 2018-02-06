@@ -10,22 +10,24 @@ class Header {
 
     onEvents() {
         window.addEventListener('scroll', () => {
-            const curScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-            console.log('scroll');
-            if (curScroll > this.lastScrollTop){
-                this.obj.classList.add('hide');
-            } else {
-                this.obj.classList.remove('hide');
-            }
+            if ( this.scrollContainer.className != 'menu-active' ) {
+                const curScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-            this.lastScrollTop = curScroll;
+                if (curScroll > this.lastScrollTop){
+                    this.obj.classList.add('hide');
+                } else {
+                    this.obj.classList.remove('hide');
+                }
 
-            if ( curScroll > 0 ) {
-                this.obj.classList.add('header_fixed');
-            } else {
-                this.obj.classList.remove('header_fixed');
-                this.obj.classList.remove('hide');
+                this.lastScrollTop = curScroll;
+
+                if ( curScroll > 0 ) {
+                    this.obj.classList.add('header_fixed');
+                } else {
+                    this.obj.classList.remove('header_fixed');
+                    this.obj.classList.remove('hide');
+                }
             }
 
         });
