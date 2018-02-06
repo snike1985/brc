@@ -60,7 +60,7 @@ $('.slider-nav').slick({
     slidesToShow: 9,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    dots: true,
+    arrows: false,
     focusOnSelect: true,
     responsive: [
         {
