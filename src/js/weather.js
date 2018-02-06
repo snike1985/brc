@@ -1,20 +1,24 @@
 $(document).ready(function() {
-    $.simpleWeather({
-        location: 'Saratoga, WY',
-        woeid: '',
-        unit: 'f',
-        success: function(weather) {
-            let  html =
-                `<span>
-                    <i class="icon-${weather.code}"></i>
-                    ${weather.temp}&deg;
-                </span>
-                ${weather.city}, ${weather.region}`;
+    const weatherElem = document.querySelectorAll('.weather');
 
-            $('.weather').html(html);
-        },
-        error: function(error) {
-            $('.weather').html('<p>'+error+'</p>');
-        }
+    [...weatherElem].forEach(elem => {
+        const curElem = $(elem);
+        const location = curElem.data('location');
+
+        $.simpleWeather({
+            location: location,
+            woeid: '',
+            unit: 'c',
+            success: function(weather) {
+                let  html =
+                    `<span><i class="icon-${weather.code}"></i>${weather.temp}&deg;</span>
+                    ${weather.city}, ${weather.region}`;
+
+                curElem.html(html);
+            },
+            error: function(error) {
+                curElem.html('<p>'+error+'</p>');
+            }
+        });
     });
 });
