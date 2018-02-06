@@ -86,7 +86,13 @@ const base = {
             })
         })
     },
+    _loader(){
+        const loader = document.querySelector('.loader');
+
+        window.addEventListener('load', () => loader.classList.add('hide'));
+    },
     init() {
+        this._loader();
         this._slider();
         this._header();
         this._menu();
