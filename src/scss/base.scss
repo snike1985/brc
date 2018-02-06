@@ -4,6 +4,7 @@
 
 html {
     font-size: 16px;
+    @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
 }
 
 html, body {
