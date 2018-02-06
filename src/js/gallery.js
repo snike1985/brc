@@ -49,37 +49,38 @@
 // //    galleryThumbs.controller.control = galleryTop;
 
 $('.slider-for').slick({
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
     fade: true,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-    slidesToShow: 6,
+    infinite: true,
+    slidesToShow: 9,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
     focusOnSelect: true,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1200,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 6,
                 infinite: true,
                 dots: true
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 4
             }
         },
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 2
+                slidesToShow: 3
             }
         }
     ]
