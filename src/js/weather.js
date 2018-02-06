@@ -7,7 +7,7 @@ $(document).ready(function() {
             let  html =
                 `<span>
                     <i class="icon-${weather.code}"></i>
-                    ${weather.temp}&deg;${weather.units.temp}
+                    ${weather.temp}&deg;
                 </span>
                 ${weather.city}, ${weather.region}`;
 
