@@ -81,6 +81,29 @@
     justify-content: space-between;
     max-width: 1200px;
 
+    &.animation {
+
+      .logos__item {
+        opacity: 0;
+        transform: translate(0, 150px);
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i/10 + .3s;
+          }
+        }
+      }
+    }
+
+    &.show {
+
+      .logos__item {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
     &__item {
       width: calc(100%/3 - 1px);
       min-height: 120vw;

@@ -63,6 +63,12 @@
 
     &.animation {
       opacity: 0;
+      padding-left: 34px;
+      transform: translate(11px, 0);
+
+      &:before {
+        left: 0;
+      }
     }
 
     &.show {

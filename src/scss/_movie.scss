@@ -52,6 +52,23 @@
 @media (min-width: $desktop) {
   .movie {
 
+    &__content {
+
+      .description {
+        max-width: 480px;
+        font-size: 16px;
+        line-height: 1.562;
+
+        &:before {
+          width: 17px;
+        }
+
+        &__title {
+          font-size: 50px;
+          line-height: 1.2;
+        }
+      }
+    }
   }
 }
 
