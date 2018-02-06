@@ -24,7 +24,8 @@ var gulp = require('gulp'),
             vendors_js: 'public/js/vendors/',
             css: 'public/css/',
             img: 'public/img/',
-            fonts: 'src/fonts/'
+            fonts: 'public/fonts/',
+            video: 'public/video/'
 
         },
         src: { //Source folder
@@ -33,7 +34,8 @@ var gulp = require('gulp'),
             vendors_js: 'src/js/vendors/*.js',
             style: 'src/scss/main.scss', //Here we take our scss, it includes all of the scss we use
             img: 'src/img/**/*', //We take images here, including nested folders
-            fonts: 'src/fonts/*'
+            fonts: 'src/fonts/*',
+            video: 'src/video/*'
         },
         watch: { //We "watch" for changes from this folders and files
             html: 'src/**/*.html',
@@ -41,7 +43,8 @@ var gulp = require('gulp'),
             vendors_js: 'src/js/vendors/*.js',
             style: 'src/scss/**/*.scss',
             img: 'src/img/**/*',
-            fonts: 'src/fonts/*'
+            fonts: 'src/fonts/*',
+            video: 'src/video/*'
         },
         clean: './public'
     };
@@ -97,6 +100,24 @@ gulp.task('image:build', function () {
         // .pipe(reload({stream: true}));
 });
 
+gulp.task('vendors_js:build', function () {
+    gulp.src(path.src.vendors_js)
+        .pipe(gulp.dest(path.build.vendors_js))
+        // .pipe(reload({stream: true}));
+});
+
+gulp.task('video:build', function () {
+    gulp.src(path.src.video)
+        .pipe(gulp.dest(path.build.video))
+        // .pipe(reload({stream: true}));
+});
+
+gulp.task('fonts:build', function () {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
+        // .pipe(reload({stream: true}));
+});
+
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
@@ -120,7 +141,10 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-    'image:build'
+    'image:build',
+    'vendors_js:build',
+    'video:build',
+    'fonts:build'
 ]);
 
 gulp.task('server', function () {
