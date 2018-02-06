@@ -1,16 +1,25 @@
 .content {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   font-size: 16px;
   color: rgb(0, 0, 0);
   line-height: 1.5625;
 
   h2 {
+    margin-bottom: 23px;
+    padding-top: 60px;
     font-size: 35px;
     text-transform: uppercase;
     line-height: 1.2;
+    font-weight: 300;
+
+    &:first-child { padding-top: 0 }
   }
 
   p {
-
+    margin-bottom: 25px;
   }
 }
 @media (min-width: $phone-landscape) {
