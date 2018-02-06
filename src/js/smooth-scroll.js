@@ -1,7 +1,7 @@
 $(function(){
 	var _window = $( window ),
 		scrollTime = 0.5,
-		scrollDistance = 125;
+		scrollDistance = 200;
 
     _window.on("mousewheel DOMMouseScroll", function(event){
         event.preventDefault();
