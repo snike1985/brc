@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gallery</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        <!--@@include('./view/templates/loader.html')-->
+        @@include('./view/templates/navigation.html')
+
+        <main class="site">
+            @@include('./view/templates/header.html')
+
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/pic8.jpg"
+            })
+
+            @@include('./view/templates/gallery.html')
+            @@include('./view/templates/footer.html')
+        </main>
+         <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>

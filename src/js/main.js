@@ -3,6 +3,7 @@ console.clear();
 //= header.js
 //= smooth-scroll.js
 //= weather.js
+//= gallery.js
 
 
 'use strict';
@@ -10,32 +11,32 @@ const base = {
     _header() {
         const header = document.querySelectorAll('.header');
 
-        if(header) {
-            [...header].forEach(obj => new Header(obj));
-        }
+        if (header) [...header].forEach(obj => new Header(obj));
 
     },
     _menu() {
         const menu = document.querySelectorAll('.menu');
 
-        [...menu].forEach(obj => new Menu(obj));
+        if (menu) [...menu].forEach(obj => new Menu(obj));
     },
     _parallaxHero() {
         const hero = document.querySelector('.hero');
         const moveElem = hero.querySelector('.hero__movie');
 
-        window.addEventListener('scroll', (e) => {
+        if (hero) {
+            window.addEventListener('scroll', (e) => {
 
-            const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-            let newposition = wScroll * 0.35,
-                newpositionTitle = wScroll * 0.25,
-                heightOfTitle = hero.offsetHeight - moveElem.offsetHeight - 100;
+                let newposition = wScroll * 0.35,
+                    newpositionTitle = wScroll * 0.25,
+                    heightOfTitle = hero.offsetHeight - moveElem.offsetHeight - 100;
                 moveElem.style.transform = 'translateY(' + newpositionTitle + 'px)';
-            if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
+                if(wScroll <= heightOfTitle && document.body.offsetHeight > 870) {
 
-            }
-        })
+                }
+            })
+        }
     },
     _parallaxImageBg() {
         const body = document.body;
@@ -89,7 +90,7 @@ const base = {
     _loader(){
         const loader = document.querySelector('.loader');
 
-        window.addEventListener('load', () => loader.classList.add('hide'));
+        if (loader) window.addEventListener('load', () => loader.classList.add('hide'));
     },
     init() {
         this._loader();
