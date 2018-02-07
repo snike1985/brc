@@ -6,165 +6,171 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <style>
- .loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  background-color: rgba(25, 75, 100, 1);
-  transition: opacity .3s ease-in-out;
- }
+    .loader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(25, 75, 100, 1);
+        transition: opacity .3s ease-in-out;
+    }
 
- .hide {
-  opacity: 0;
-  pointer-events: none;
- }
+    .hide {
+        opacity: 0;
+        pointer-events: none;
+    }
 
- .filter {
-  position: absolute;
-  visibility: hidden;
-  clip: rect(0,0,0,0);
- }
+    .filter {
+        position: absolute;
+        visibility: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
 
- .dots {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: url(#gooeyness);
-  padding: 30px;
- }
+    .dots {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 336px;
+        margin-left: 12px;
+        transform: translate(-50%, -50%);
+        filter: url(#gooeyness);
+        padding: 30px;
+    }
 
- .dot {
-  background: white;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 20px;
-  width: 32px;
-  height: 32px;
- }
+    .dot {
+        background: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 20px;
+        width: 32px;
+        height: 32px;
+    }
 
- .dot:first-child {
-  animation: FirstDot 3s infinite;
- }
+    .dot:first-child {
+        animation: FirstDot 3s infinite;
+    }
 
- .dot:nth-child(2) {
-  animation: SecondDot 3s infinite;
- }
+    .dot:nth-child(2) {
+        animation: SecondDot 3s infinite;
+    }
 
- .dot:nth-child(3) {
-  animation: ThirdDot 3s infinite;
- }
+    .dot:nth-child(3) {
+        animation: ThirdDot 3s infinite;
+    }
 
- .dot:nth-child(4) {
-  animation: FourthDot 3s infinite;
- }
+    .dot:nth-child(4) {
+        animation: FourthDot 3s infinite;
+    }
 
- .dot:nth-child(5) {
-  animation: FifthDot 3s infinite;
- }
+    .dot:nth-child(5) {
+        animation: FifthDot 3s infinite;
+    }
 
- @keyframes FirstDot {
-  0% {
-   transform: scale(1) translateX(0);
-  }
-  25% {
-   transform: scale(2.5) translateX(0);
-  }
-  50% {
-   transform: scale(1) translateX(0);
-  }
-  83% {
-   transform: scale(1) translateX(240px);
-  }
-  100% {
-   transform: scale(1) translateX(0);
-  }
- }
+    @keyframes FirstDot {
+        0% {
+            transform: scale(1) translateX(0);
+        }
+        25% {
+            transform: scale(2.5) translateX(0);
+        }
+        50% {
+            transform: scale(1) translateX(0);
+        }
+        83% {
+            transform: scale(1) translateX(240px);
+        }
+        100% {
+            transform: scale(1) translateX(0);
+        }
+    }
 
- @keyframes SecondDot {
-  0% {
-   transform: translateX(0px);
-  }
-  27% {
-   transform: translateX(-40px);
-  }
-  50% {
-   transform: translateX(0px);
-  }
-  81% {
-   transform: translateX(180px);
-  }
-  100% {
-   transform: translateX(0);
-  }
- }
+    @keyframes SecondDot {
+        0% {
+            transform: translateX(0px);
+        }
+        27% {
+            transform: translateX(-40px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        81% {
+            transform: translateX(180px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
- @keyframes ThirdDot {
-  0% {
-   transform: translateX(0px);
-  }
-  29% {
-   transform: translateX(-100px);
-  }
-  50% {
-   transform: translateX(0px);
-  }
-  79% {
-   transform: translateX(120px);
-  }
-  100% {
-   transform: translateX(0);
-  }
- }
+    @keyframes ThirdDot {
+        0% {
+            transform: translateX(0px);
+        }
+        29% {
+            transform: translateX(-100px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        79% {
+            transform: translateX(120px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
- @keyframes FourthDot {
-  0% {
-   transform: translateX(0px);
-  }
-  31% {
-   transform: translateX(-160px);
-  }
-  50% {
-   transform: translateX(0px);
-  }
-  77% {
-   transform: translateX(60px);
-  }
-  100% {
-   transform: translateX(0);
-  }
- }
+    @keyframes FourthDot {
+        0% {
+            transform: translateX(0px);
+        }
+        31% {
+            transform: translateX(-160px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        77% {
+            transform: translateX(60px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
- @keyframes FifthDot {
-  0% {
-   transform: scale(1) translateX(0);
-  }
-  33% {
-   transform: scale(1) translateX(-220px);
-  }
-  50% {
-   transform: scale(1) translateX(0);
-  }
-  75% {
-   transform: scale(2.5) translateX(0);
-  }
-  100% {
-   transform: scale(1) translateX(0);
-  }
- }
+    @keyframes FifthDot {
+        0% {
+            transform: scale(1) translateX(0);
+        }
+        33% {
+            transform: scale(1) translateX(-220px);
+        }
+        50% {
+            transform: scale(1) translateX(0);
+        }
+        75% {
+            transform: scale(2.5) translateX(0);
+        }
+        100% {
+            transform: scale(1) translateX(0);
+        }
+    }
 </style>
 
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>-->
 <link rel="stylesheet" href="css/main.css">
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/vendors/jquery.simpleWeather.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSRulePlugin.min.js" charset="utf-8"></script>-->
