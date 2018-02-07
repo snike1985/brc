@@ -1,87 +1,83 @@
-// var galleryTop = new Swiper('.gallery-top', {
-//     spaceBetween: 10,
-//     lazy: true,
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     on: {
-//         slideChange: function () {
-//             console.log(this.activeIndex);
-//             galleryThumbs.slideTo(this.activeIndex);
-//             console.log('thumb acIndex ', galleryThumbs.activeIndex);
-//             $(elems).removeClass('active');
-//             $(elems).eq(this.activeIndex).addClass('active');
-//         }
-//     }
-// });
-// var galleryThumbs = new Swiper('.gallery-thumbs', {
-//     spaceBetween: 10,
-//     slidesPerView: 6,
-//     centeredSlides: true,
-//     on: {
-//         init: function () {
-//             console.log('swiper initialized');
-//         },
-//         click: function (index) {
-//                console.log('swiper click', $(index.target).data('id'));
-//                galleryTop.slideTo($(index.target).data('id'));
-//         },
-//         tab: function (index) {
-//             console.log('swiper click', index);
-//         },
-//     },
-// });
-//
-// var elems = document.querySelectorAll('.gallery-thumbs .swiper-slide');
-//
-// elems.forEach((el) => {
-//
-//     el.addEventListener('click', () => {
-//         console.log($(el).data('id'));
-//         $(elems).removeClass('active');
-//         el.classList.add('active');
-//         galleryTop.slideTo($(el).data('id'));
-//     });
-//
-// });
-// //    galleryTop.controller.control = galleryThumbs;
-// //    galleryThumbs.controller.control = galleryTop;
+const sliderFor = $('.slider-for');
+const sliderNav = $('.slider-nav');
+let lazyloadsFor = null;
+let lazyloadsNav = null;
 
-$('.slider-for').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-    infinite: true,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    arrows: false,
-    focusOnSelect: true,
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 6,
-                infinite: true,
-                dots: true
+function initSliders() {
+
+    sliderFor.on('afterChange', function(){
+        setBackground(lazyloadsFor);
+
+    });
+
+    sliderFor.on('init', function(){
+        lazyloadsFor = sliderFor.find('.lazyload');
+        setBackground(lazyloadsFor);
+    });
+
+    sliderNav.on('afterChange', function(){
+        setBackground(lazyloadsNav);
+
+    });
+
+    sliderNav.on('init', function(){
+        lazyloadsNav = sliderNav.find('.lazyload');
+        setBackground(lazyloadsNav);
+    });
+
+    sliderFor.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+
+    sliderNav.slick({
+        infinite: true,
+        slidesToShow: 9,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        arrows: false,
+        focusOnSelect: true,
+        // centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 3
-            }
+        ]
+    });
+}
+
+function setBackground(elems) {
+    elems.each(function () {
+        const curElem = $(this);
+        const dataSrc = curElem.data('src');
+
+        if (curElem.hasClass('slick-active') && !curElem.hasClass('loaded')) {
+
+            curElem.addClass('loaded');
+
+            curElem.css({
+                'background-image': `url(${dataSrc})`
+            });
         }
-    ]
-});
+    });
+}
+
+initSliders();
