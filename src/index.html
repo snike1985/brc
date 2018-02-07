@@ -7,32 +7,41 @@
 <body>
 
 @@include('./view/templates/loader.html')
+
 @@include('./view/templates/navigation.html')
-    <main class="site">
-        @@include('./view/templates/header.html')
-        @@include('./view/templates/hero.html')
-        <div data-template="main-title">
-            <div data-widget="text">
-                <h3>
-                    welcome to
-                </h3>
-                <h2>
-                    The True Spirit of the West
-                </h2>
-                <p>
-                    Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br> located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra Madre Mountain range and stunning Medicine Bow National Forest.
-                </p>
-                <p>
-                    Lorem ipsum dolor <em>sit amet</em>, consectetur adipisicing elit. <br> Cupiditate, ex! Maiores earum placeat nemo sequi, <br> quia maxime libero sit, dolorem?
-                </p>
-            </div>
+
+<main class="site">
+
+    @@include('./view/templates/header.html')
+
+    @@include('./view/templates/hero.html')
+
+    <div data-template="main-title">
+        <div data-widget="text">
+            <h3>
+                welcome to
+            </h3>
+            <h2>
+                The True Spirit of the West
+            </h2>
+            <p>
+                Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br>
+                located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra
+                Madre Mountain range and stunning Medicine Bow National Forest.
+            </p>
+            <p>
+                Lorem ipsum dolor <em>sit amet</em>, consectetur adipisicing elit. <br> Cupiditate, ex! Maiores earum
+                placeat nemo sequi, <br> quia maxime libero sit, dolorem?
+            </p>
         </div>
-        <!-- image-container -->
-        <div class="image-container type_1">
+    </div>
+
+    <!-- image-container -->
+    <div class="image-container type_1">
 
         @@include('./view/templates/logos.html', {
-                "class": "animation"
-            })
+        "class": "animation"
+        })
 
         <!-- description -->
         <div class="description description_white animation">
@@ -58,16 +67,16 @@
         <!-- movie -->
         <div class="movie">
 
-                <!-- movie__wrap -->
-                <div class="movie__wrap">
-                    <!--<img src="img/bg/pic2.jpg" alt="">-->
-                    <video autoplay loop poster="img/bg/pic2.jpg" >
-                        <source src="video/video1.mp4" type="video/mp4">
-                        Your browser doesn't support HTML5 video tag.
-                    </video>
+            <!-- movie__wrap -->
+            <div class="movie__wrap">
+                <!--<img src="img/bg/pic2.jpg" alt="">-->
+                <video autoplay loop poster="img/bg/pic2.jpg">
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
                 <img src="img/bg/pic2.jpg" alt="">
-                </div>
-                <!-- /movie__wrap -->
+            </div>
+            <!-- /movie__wrap -->
 
             <!-- movie__content -->
             <div class="movie__content">
@@ -104,7 +113,9 @@
         <img class="image-container__bg" src="img/bg/pic4.png" alt="">
     </div>
     <!-- /image-container -->
+
     @@include('./view/templates/footer_main.html')
+
 </main>
 <script src="js/main.js" charset="utf-8"></script>
 </body>

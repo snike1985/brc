@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Gallery</title>
-        @@include('./view/components/head.html')
-    </head>
-    <body>
-        <!--@@include('./view/templates/loader.html')-->
-        @@include('./view/templates/navigation.html')
+<head>
+    <title>Gallery</title>
+    @@include('./view/components/head.html')
+</head>
+<body>
 
-        <main class="site">
-            @@include('./view/templates/header.html')
+@@include('./view/templates/loader.html')
 
-            @@include('./view/templates/hero2.html', {
-                "heroimage": "img/bg/pic8.jpg"
-            })
+@@include('./view/templates/navigation.html')
 
-            @@include('./view/templates/gallery.html')
-            @@include('./view/templates/footer.html')
-        </main>
-         <script src="js/main.js" charset="utf-8"></script>
-    </body>
+<main class="site">
+
+    @@include('./view/templates/header.html')
+
+    @@include('./view/templates/hero2.html', {
+    "heroimage": "img/bg/pic8.jpg"
+    })
+
+    @@include('./view/templates/gallery.html')
+
+    @@include('./view/components/main-title.html', {
+    "h2": "photo gallery",
+    "h3": "",
+    "p": "Enter our gates and discover a Western adventure like no other. Over 30,000 acres <br> of unspoiled wilderness, a plethora of hunting, fishing, and recreational activities, and the <br> relaxing getaway of a lifetime all await you at our luxury dude ranch. Explore our ranch and see what it's like <br> to experience the true spirit of the West. Although a picture may be worth a thousand words, <br> nothing truly compares to the real-life adventure that awaits at Brush Creek Ranch."
+    })
+
+    @@include('./view/templates/gallery.html')
+
+    @@include('./view/components/main-title.html', {
+    "h2": "video gallery",
+    "h3": "",
+    "p": "Enter our gates and discover a Western adventure like no other. Over 30,000 acres <br> of unspoiled wilderness, a plethora of hunting, fishing, and recreational activities, and the <br> relaxing getaway of a lifetime all await you at our luxury dude ranch. Explore our ranch and see what it's like <br> to experience the true spirit of the West. Although a picture may be worth a thousand words, <br> nothing truly compares to the real-life adventure that awaits at Brush Creek Ranch."
+    })
+
+    @@include('./view/templates/footer.html', {
+    "datafooter": "accomodations"
+    })
+
+</main>
+<script src="js/main.js" charset="utf-8"></script>
+</body>
 </html>
