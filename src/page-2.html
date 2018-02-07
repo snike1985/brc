@@ -1,117 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Page_2</title>
+    <head>
+        <title>Page_2</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        @@include('./view/templates/loader.html')
+        @@include('./view/templates/navigation.html')
 
-    @@include('./view/components/head.html')
+        <main class="site accomodations">
+            @@include('./view/templates/header.html')
 
-</head>
-<body>
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/pic6.jpg"
+            })
 
-@@include('./view/templates/loader.html')
+            @@include('./view/components/main-title.html', {
+                "h2": "accomodations",
+                "h3": "luxury",
+                "p": "Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your unforgettable adventure."
+            })
 
-@@include('./view/templates/navigation.html')
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/sliderimage1.jpg",
+                "slider2": "img/slider/sliderimage1.jpg",
+                "slider3": "img/slider/sliderimage1.jpg"
+            })
 
-<main class="site accomodations">
-    @@include('./view/templates/header.html')
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos1.svg",
+                "title": "lodging for all",
+                "inner": "<p><strong>Feel the Spirit of the West</strong></p><br><br><p>Log cabins and lodges outfitted with modern amenities and lavish <br> accents deliver the ultimate in comfort and provide a rustically <br> elegant setting for your unforgettable adventure. </p><br><p>Room types:</p><ul><li>Lodge Rooms</li><li>Cabin Suites</li><li>Cabin Residence</li></ul>"
+            })
 
-    @@include('./view/templates/hero2.html', {
-    "heroimage": "img/bg/pic6.jpg"
-    })
+            @@include('./view/templates/image-title-accomodations.html', {
+                "title": "intimate",
+                "image": "img/bg/pic6.jpg",
+                "text": "<p><strong>Individual cabin residences for couples</strong></p><br><br><p>The ultimate in sophisticated luxury, uncover a hideaway<br>that unfolds as a romantic and spellbinding retreat.</p>"
+            })
 
-    @@include('./view/components/main-title.html', {
-    "h2": "accomodations",
-    "h3": "luxury",
-    "p": "Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your
-    closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury
-    amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your
-    unforgettable adventure."
-    })
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/sliderimage2.jpg",
+                "slider2": "img/slider/sliderimage2.jpg",
+                "slider3": "img/slider/sliderimage2.jpg"
+            })
 
-    @@include('./view/templates/slider-accomodations.html', {
-    "slider1": "img/slider/sliderimage1.jpg",
-    "slider2": "img/slider/sliderimage1.jpg",
-    "slider3": "img/slider/sliderimage1.jpg"
-    })
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos2.svg",
+                "title": "Fall Deeper in Love",
+                "inner": "<p><strong>Reconnect at the Deepest Level</strong></p><br><br><p>Magee Homestead offers a collection of nine historically restored luxury cabin <br> residences and suites, elegantly decorated by celebrated design firm Simeone Deary.</p><br><ul><li>Tz Deluxe Cabin Residence</li><li>Mellon Cabin Residence</li><li>Burgess Cabin Suite</li></ul>"
+            })
 
-    @@include('./view/templates/slider-accomodations-description.html', {
-    "logo": "img/logos/logos1.svg",
-    "title": "lodging for all",
-    "inner": "<p><strong>Feel the Spirit of the West</strong></p><br><br>
-    <p>Log cabins and lodges outfitted with modern amenities and lavish <br> accents deliver the ultimate in comfort and
-        provide a rustically <br> elegant setting for your unforgettable adventure. </p><br>
-    <p>Room types:</p>
-    <ul>
-        <li>Lodge Rooms</li>
-        <li>Cabin Suites</li>
-        <li>Cabin Residence</li>
-    </ul>
-    "
-    })
+            @@include('./view/templates/image-title-accomodations.html', {
+                "class": "page-2-sec-2",
+                "title": "creekside",
+                "image": "img/bg/pic8.jpg",
+                "text": "<p><strong>Indelible accomodations of all kinds</strong></p><br><br><p>Restored luxury cabin suites offer the perfect <br>romantic cottage setting, ideal for reconnecting.</p>"
+            })
 
-    @@include('./view/templates/image-title-accomodations.html', {
-    "title": "intimate",
-    "image": "img/bg/pic6.jpg",
-    "text": "<p><strong>Individual cabin residences for couples</strong></p><br><br>
-    <p>The ultimate in sophisticated luxury, uncover a hideaway<br>that unfolds as a romantic and spellbinding retreat.
-    </p>"
-    })
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/sliderimage3.jpg",
+                "slider2": "img/slider/sliderimage3.jpg",
+                "slider3": "img/slider/sliderimage3.jpg"
+            })
 
-    @@include('./view/templates/slider-accomodations.html', {
-    "slider1": "img/slider/sliderimage2.jpg",
-    "slider2": "img/slider/sliderimage2.jpg",
-    "slider3": "img/slider/sliderimage2.jpg"
-    })
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos3.svg",
+                "title": "KING OF THE CASTLE",
+                "inner": "<p>Up to 10 guests in a single party will have exclusive access to the ultra-secluded <br>Sportsman’s Club with four private luxury log cabins perched on French Creek, enjoying unlimited access to the notable sporting experiences it affords.<br><br><ul><li>Millies Cabin Residence</li><li>Jenkins Cabin Suite</li><li>Barkus Cabin Suite</li><li>Bennet Cabin Suite</li></ul>"
+            })
 
-    @@include('./view/templates/slider-accomodations-description.html', {
-    "logo": "img/logos/logos2.svg",
-    "title": "Fall Deeper in Love",
-    "inner": "<p><strong>Reconnect at the Deepest Level</strong></p><br><br>
-    <p>Magee Homestead offers a collection of nine historically restored luxury cabin <br> residences and suites,
-        elegantly decorated by celebrated design firm Simeone Deary.</p><br>
-    <ul>
-        <li>Tz Deluxe Cabin Residence</li>
-        <li>Mellon Cabin Residence</li>
-        <li>Burgess Cabin Suite</li>
-    </ul>
-    "
-    })
+            @@include('./view/templates/footer-title.html')
+        </main>
 
-    @@include('./view/templates/image-title-accomodations.html', {
-    "class": "page-2-sec-2",
-    "title": "creekside",
-    "image": "img/bg/pic8.jpg",
-    "text": "<p><strong>Indelible accomodations of all kinds</strong></p><br><br>
-    <p>Restored luxury cabin suites offer the perfect <br>romantic cottage setting, ideal for reconnecting.</p>"
-    })
-
-    @@include('./view/templates/slider-accomodations.html', {
-    "slider1": "img/slider/sliderimage3.jpg",
-    "slider2": "img/slider/sliderimage3.jpg",
-    "slider3": "img/slider/sliderimage3.jpg"
-    })
-
-    @@include('./view/templates/slider-accomodations-description.html', {
-    "logo": "img/logos/logos3.svg",
-    "title": "KING OF THE CASTLE",
-    "inner": "<p>Up to 10 guests in a single party will have exclusive access to the ultra-secluded <br>Sportsman’s Club
-    with four private luxury log cabins perched on French Creek, enjoying unlimited access to the notable sporting
-    experiences it affords.<br><br>
-    <ul>
-        <li>Millies Cabin Residence</li>
-        <li>Jenkins Cabin Suite</li>
-        <li>Barkus Cabin Suite</li>
-        <li>Bennet Cabin Suite</li>
-    </ul>
-    "
-    })
-
-    @@include('./view/templates/footer-title.html')
-</main>
-
-@@include('./view/templates/footer.html', {
-"datafooter": "accomodations"
-})
-<script src="js/main.js" charset="utf-8"></script>
-</body>
+        @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+        })
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
 </html>
