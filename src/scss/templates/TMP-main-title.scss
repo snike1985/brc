@@ -4,7 +4,25 @@
     text-align: center;
     padding: 2.813rem 2rem 8.5rem;
 
+    [data-text="center"] {
+        text-align: center;
+    }
+    [data-text="justify"] {
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100%;
+        text-align: justify;
+    }
+
     p {
         font-weight: 500;
+        margin-bottom: 2.188rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .btn {
+        margin-top: 90px;
     }
 }

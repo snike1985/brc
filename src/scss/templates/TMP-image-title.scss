@@ -15,6 +15,7 @@
             left: 0; top: 0;
             background-color: rgba(black, .45);
         }
+
         &:after {
             content: '';
             width: 100%;
@@ -60,6 +61,16 @@
         font-weight: 300;
     }
 
+    &.text-left-center {
+
+        .block {
+            .inner {
+                align-items: center;
+                justify-content: flex-start;
+                //padding-bottom: 15vw;
+            }
+        }
+    }
     &.text-right-bottom {
 
         .block {
@@ -67,8 +78,6 @@
                 align-items: flex-end;
                 justify-content: flex-end;
                 padding-bottom: 15vw;
-
-
             }
         }
     }
