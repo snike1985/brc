@@ -15,12 +15,15 @@
             })
 
             @@include('./view/components/main-title.html', {
-                "align": "center",
                 "h2": "activities",
-                "h3": "grand • heart pounding • exhilarating",
-                "p": "<p>Our all-inclusive vacations include luxury lodging, inspired amenities, world-class cuisine,  <br> and vast array of ranch experiences that unfold across an expanse of 30,000 Western acres <br> allowing you to fully immerse yourself in the adventure of a lifetime.</p>",
-                "button": ""
+                "h3": "grand • heart pounding • exhilarating"
             })
+
+            <section data-template="text" data-align="center">
+                <div data-widget="text">
+                    <p>Our all-inclusive vacations include luxury lodging, inspired amenities, world-class cuisine,  <br> and vast array of ranch experiences that unfold across an expanse of 30,000 Western acres <br> allowing you to fully immerse yourself in the adventure of a lifetime.</p>
+                </div>
+            </section>
 
             @@include('./view/templates/slider-accomodations.html', {
                 "slider1": "img/slider/activities-slider-pic-1.jpg",

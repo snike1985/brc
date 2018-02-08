@@ -3,3 +3,17 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.row {
+    display: grid;
+
+    &.col-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 25px;
+
+        > * {
+            //border: 1px solid black;
+        }
+    }
+}

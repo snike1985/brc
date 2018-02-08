@@ -15,12 +15,15 @@
             })
 
             @@include('./view/components/main-title.html', {
-                "align": "center",
                 "h2": "accomodations",
-                "h3": "luxury",
-                "p": "<p>Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your unforgettable adventure.</p>",
-                "button": ""
+                "h3": "luxury"
             })
+
+            <section data-template="text" data-align="center">
+                <div data-widget="text">
+                    <p>Whether you are staying with your family for a reunion, your significant other <br> to reconnect, or your closest hunting partners, the entire Brush Creek Ranch Collection <br> is outfitted with Western-inspired luxury amenities and lavish accents deliver the ultimate <br> in comfort and provide a rustically elegant setting for your unforgettable adventure.</p>
+                </div>
+            </section>
 
             @@include('./view/templates/slider-accomodations.html', {
                 "slider1": "img/slider/sliderimage1.jpg",

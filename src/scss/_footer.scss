@@ -2,10 +2,16 @@
   text-align: center;
 
     &[data-footer="accomodations"] {
-        padding-top: 200px;
+        margin-top: calc(100px - 2vw);
+        //margin-top: 250px;
+        //padding-top: 200px;
         position: relative;
         z-index: -1;
 
+        @media(max-width: $phone-landscape) {
+            margin-top: 0;
+        }
+        
         .footer__top {
             &:after {
                 background-image: url("../img/footer-bg-2.jpg");

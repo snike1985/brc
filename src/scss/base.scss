@@ -5,10 +5,14 @@
 html {
     font-size: 16px;
     @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
+
+    @media(max-width: $phone-landscape) {
+        font-size: 67.5%;
+    }
 }
 
 html, body {
-    //height: 100%;
+    height: 100%;
 }
 
 body {

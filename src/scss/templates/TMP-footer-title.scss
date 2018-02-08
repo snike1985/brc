@@ -2,11 +2,15 @@
     @extend %inner;
 
     text-align: center;
-    padding: 2.813rem 2rem 5.5rem;
-    transform: translatey(30%);
-
-
+    padding: 2.813rem 2rem 250px;
+    margin-bottom: -250px;
     color: var(--white);
+    max-width: 1024px;
+
+    @media(max-width: $phone-landscape) {
+        margin-bottom: 0;
+        padding: 3rem 2rem;
+    }
 
     @media(max-width: $tablet-landscape) {
         color: var(--black);
