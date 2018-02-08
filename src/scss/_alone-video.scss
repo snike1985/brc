@@ -1,0 +1,33 @@
+.alone-video {
+  position: relative;
+  padding-top: 55%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .alone-video {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .alone-video {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .alone-video {
+
+  }
+}
+@media (min-width: $desktop) {
+  .alone-video {
+
+  }
+}
+

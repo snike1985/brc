@@ -11,7 +11,7 @@
             @@include('./view/templates/header.html')
 
             @@include('./view/templates/hero2.html', {
-                "heroimage": "img/bg/pic6.jpg"
+                "heroimage": "img/bg/pic23.jpg"
             })
 
             @@include('./view/components/main-title.html', {
@@ -112,6 +112,29 @@ instructions
                     </div>
                 </div>
             </section>
+
+            <section data-template="text" data-align="justify">
+                <div data-widget="text">
+                    <h2>
+                        The employee <br>
+                        experience
+                    </h2>
+                    <p>Curious about what life is like working at Brush Creek Ranch? <br>
+                        Want to know what it takes to succeed as a Brush Creek Ranch <br>
+                        employee? Here's a quick inside look at ranch life as told by some <br>
+                        of our seasoned staff. </p>
+                </div>
+            </section>
+
+            <section data-template="text" data-align="justify">
+                @@include('./view/templates/alone-video.html', {
+                    "src": "https://www.youtube.com/embed/mVJI1k9xmKM"
+                })
+            </section>
+
+            @@include('./view/templates/footer.html', {
+                "datafooter": "accomodations"
+            })
         </main>
         <script src="js/main.js" charset="utf-8"></script>
     </body>
