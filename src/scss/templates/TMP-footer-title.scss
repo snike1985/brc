@@ -3,14 +3,18 @@
 
     text-align: center;
     padding: 2.813rem 2rem 5.5rem;
+    transform: translatey(30%);
+
 
     color: var(--white);
 
-    @media(max-width: 668px) {
-        background-color: #f2f2f2;
+    @media(max-width: $tablet-landscape) {
         color: var(--black);
     }
 
+    @media(max-width: 668px) {
+        background-color: #f2f2f2;
+    }
 
     .title {
         @extend %Title;
