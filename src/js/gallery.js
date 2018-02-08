@@ -1,5 +1,6 @@
-const sliderFor = $('.slider-for');
-const sliderNav = $('.slider-nav');
+const gallery = $('.gallery');
+const sliderFor = gallery.find('.slider-for');
+const sliderNav = gallery.find('.slider-nav');
 let lazyloadsFor = null;
 let lazyloadsNav = null;
 
