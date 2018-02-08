@@ -28,7 +28,7 @@ gallery.each(function () {
 
 function initVideoSliders(sliderFor, sliderNav) {
     let lazyloadsFor = null;
-    let lazyloadsNav = null;
+    let lazyloadsNav = sliderNav.find('.lazyload');
 
     sliderFor.on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if (!players[`youtube${nextSlide}`]) {
@@ -44,6 +44,7 @@ function initVideoSliders(sliderFor, sliderNav) {
     });
 
     sliderNav.on('afterChange', function(){
+        lazyloadsNav = sliderNav.find('.lazyload');
         setBackground(lazyloadsNav);
 
     });
@@ -51,6 +52,12 @@ function initVideoSliders(sliderFor, sliderNav) {
     sliderNav.on('init', function(){
         lazyloadsNav = sliderNav.find('.lazyload');
         setBackground(lazyloadsNav);
+    });
+
+    sliderNav.on('setPosition', function(){
+        // lazyloadsNav = sliderNav.find('.lazyload');
+        // setBackground(lazyloadsNav);
+        console.log('setPosition');
     });
 
     sliderFor.slick({
@@ -174,7 +181,6 @@ function setBackground(elems) {
 function setVideo(curElem) {
     let dataVideo = curElem.data('video'),
         i = curElem.index();
-    console.log('elem');
 
     curElem.append(`<div id="youtube${i}"></div>`);
 
