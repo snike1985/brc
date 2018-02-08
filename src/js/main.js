@@ -92,6 +92,11 @@ const base = {
 
         if (loader) window.addEventListener('load', () => loader.classList.add('hide'));
     },
+    _windowHandler(){
+        window.addEventListener('resize', () => {
+            this._flexibleText()
+        })
+    },
     _flexibleText() {
 		console.log('...flexible text inited')
 		const text_block = document.querySelectorAll('[data-component="flex"]');
@@ -122,7 +127,7 @@ const base = {
 
 				//Copy will try be one line, if the block will be able to contain the element of copy with SIZE_MIN_LIMITATION
 				if(item.classList.contains('single')){
-					inner.style.lineHeight = 2.5;//_getCSS(item, 'height')/2 + 'px';
+					inner.style.lineHeight = '2.5';//_getCSS(item, 'height')/2 + 'px';
 				}
 
 				//Fallback on resize
@@ -145,6 +150,7 @@ const base = {
 		}
 	},
     init() {
+        this._windowHandler();
         this._loader();
         this._slider();
         this._header();
