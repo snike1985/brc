@@ -1,55 +1,87 @@
 .news-preview {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1260px;
-  margin: 0 auto;
   padding: 0 20px;
 
   &__item {
-    width: calc(100%/3 - 60px);
-    margin: 30px;
-    font-size: 16px;
+    margin: 0 0 30px;
+    font-size: 1rem;
+    color: rgb(87, 45, 29);
+    line-height: 1.2;
 
     h2 {
-      margin-bottom: 20px;
-      font-size: 24.36px;
+      margin-bottom: 0.9375rem;
+      font-size: 1.5225rem;
       color: rgb(87, 45, 29);
       text-transform: uppercase;
-      line-height: 1.2;
+      font-weight: 400;
     }
 
     time {
-      font-size: 17px;
+      display: block;
+      margin-bottom: 0.4375rem;
+      font-size: 0.8825rem;
       color: rgb(0, 0, 6);
-      font-weight: 700;
+      font-weight: 900;
       text-transform: uppercase;
-      line-height: 1.2;
     }
 
     p {
-      margin-bottom: 20px;
-      line-height: 1.1;
+      min-height: 4.625rem;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .btn {
+      height: 49px;
+      min-width: 192px;
+      font-size: 1.235625rem;
+      letter-spacing: 1.5px;
     }
   }
 
+  &__description {
+    padding: 0 14px;
+  }
+
   &__pic {
+    overflow: hidden;
+    position: relative;
     display: block;
-    margin-bottom: 30px;
-    height: 350px;
+    margin-bottom: 3.0625rem;
+    padding-top: 100%;
 
     img {
+      @include absoluteCenter();
       width: 100%;
+      min-height: 100%;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:hover {
+
+      img {
+        transform: translate(-50%, -50%) matrix(1.2,0,0,1.2,0,0);
+        transition-duration: 3s;
+      }
     }
   }
 }
 @media (min-width: $phone-landscape) {
   .news-preview {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
+    &__item {
+      width: calc(100%/2 - 15px);
+    }
   }
 }
 @media (min-width: $tablet-portrait) {
   .news-preview {
 
+    &__item {
+      width: calc(100%/3 - 15px);
+    }
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -59,7 +91,24 @@
 }
 @media (min-width: $desktop) {
   .news-preview {
+    max-width: 1260px;
+    margin: 0 auto;
 
+    &__item {
+      width: calc(100%/3 - 60px);
+      margin: 0 30px 69px;
+
+      &.animation {
+        opacity: 0;
+        transform: translate(0, 150px);
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+      }
+
+      &.show {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
   }
 }
 
