@@ -4,6 +4,8 @@ console.clear();
 //= smooth-scroll.js
 //= weather.js
 //= gallery.js
+//= video-gallery.js
+//= load-more.js
 
 
 'use strict';
@@ -71,7 +73,18 @@ const base = {
                     curElem.classList.add('show');
                 }
             })
+
+            window.addEventListener('load', () => {
+                const wScroll = body.scrollTop + body.clientHeight;
+                const c = curElem.getBoundingClientRect();
+                const elemScrollTop = body.scrollTop + c.top;
+
+                if (wScroll > elemScrollTop) {
+                    curElem.classList.add('show');
+                }
+            })
         });
+
     },
     _slider(){
         const sliders = document.querySelectorAll('[data-template="slider"]');
