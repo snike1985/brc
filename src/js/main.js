@@ -4,7 +4,6 @@ console.clear();
 //= smooth-scroll.js
 //= weather.js
 //= gallery.js
-//= video-gallery.js
 //= load-more.js
 
 
