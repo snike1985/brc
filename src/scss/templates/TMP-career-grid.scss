@@ -1,18 +1,26 @@
 [data-template="career-grid"] {
     max-width: 1024px;
     margin: 7.5rem auto;
-    padding: 0 1rem;
+    padding: 0 var(--text-common-padding);
     width: 100%;
+
+    @media(max-width: $phone-landscape) {
+        margin: 2.5rem auto;
+    }
 
     .btn {
         width: 100%;
     }
 
-    .inner-padding {
-
-    }
     .row {
         .item {
+            margin-bottom: 3rem;
+
+            &:nth-of-type(1) {
+                > * {
+                    padding-top: 3.75rem;
+                }
+            }
             &:nth-of-type(2) {
                 > * {
                     padding: 3.75rem 2.813rem;

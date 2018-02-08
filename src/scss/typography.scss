@@ -7,16 +7,31 @@
     font-family: var(--FontRegular);
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
 }
 
 [data-widget="text"] {
+
+    @media(max-width: $phone-landscape) {
+        br {
+            display: none;
+        }
+
+        > * {
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            margin-bottom: 3rem;
+        }
+
+    }
 
     h1, h2, h3, h4, h5 {
         @extend %Title;
 
         line-height: 1.25;
-        margin-bottom: 0;
+        //margin-bottom: 0;
     }
 
     h1 {
@@ -59,9 +74,5 @@
         list-style-position: inside;
         line-height: 1.5;
         font-size: 1.25rem;
-
-        li {
-            //margin-bottom: 3rem;
-        }
     }
 }

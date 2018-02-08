@@ -92,6 +92,58 @@ const base = {
 
         if (loader) window.addEventListener('load', () => loader.classList.add('hide'));
     },
+    _flexibleText() {
+		console.log('...flexible text inited')
+		const text_block = document.querySelectorAll('[data-component="flex"]');
+
+		//Common function to get all of the necessary CSS properties
+		let _getCSS = (element, property) => {
+			return Math.round(parseFloat(window.getComputedStyle(element, null).getPropertyValue(property)));
+		}
+
+		//Const to limit the lower value of font pixel size. It stays still readable in any cases.
+		const SIZE_MIN_LIMITATION = 10;
+
+		if(text_block) {
+
+			[...text_block].forEach(item => {
+
+				const inner = item.querySelector('*');
+                console.log(inner);
+				inner.style.display = "inline-block";
+
+				let currentFontSize = _getCSS(inner, 'font-size');
+
+				const SIZE_MAX_LIMITATION = (data = 'data-size') => {
+					inner.style.removeProperty('font-size');
+					inner.setAttribute(data, _getCSS(inner, 'font-size'));
+					return inner.getAttribute(data);
+				}
+
+				//Copy will try be one line, if the block will be able to contain the element of copy with SIZE_MIN_LIMITATION
+				if(item.classList.contains('single')){
+					inner.style.lineHeight = 2.5;//_getCSS(item, 'height')/2 + 'px';
+				}
+
+				//Fallback on resize
+				while (_getCSS(item, 'height') > _getCSS(inner, 'height')) {
+					if (currentFontSize == SIZE_MAX_LIMITATION()) return;
+					inner.style.fontSize = ++currentFontSize + 'px';
+				}
+
+				while (_getCSS(item, 'height') < _getCSS(inner, 'height')) {
+
+					//Don't need our copy to be too small
+					if (currentFontSize < SIZE_MIN_LIMITATION) {
+						inner.style.fontSize = currentFontSize + 'px';
+						inner.style.lineHeight = '1.25';
+						return;
+					};
+					inner.style.fontSize = --currentFontSize + 'px';
+				}
+			})
+		}
+	},
     init() {
         this._loader();
         this._slider();
@@ -100,6 +152,7 @@ const base = {
         this._animation();
         this._parallaxHero();
         this._parallaxImageBg();
+        this._flexibleText();
     }
 }
 

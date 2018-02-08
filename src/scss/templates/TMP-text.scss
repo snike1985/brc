@@ -1,8 +1,11 @@
 [data-template="text"] {
+
     max-width: 1024px;
-    padding: 0 3rem;
+    padding: 0 var(--text-common-padding);
     width: 100%;
     margin: 0 auto;
+
+    
 
     &[data-align="center"] {
         text-align: center;
@@ -12,6 +15,7 @@
         ul {
             list-style-position: outside;
             margin-left: 1rem;
+
             li {
                 margin-bottom: 2.813rem;
 
