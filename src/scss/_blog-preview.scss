@@ -1,5 +1,6 @@
 .blog-preview {
   padding: 0 20px;
+  margin-bottom: 10.625rem;
 
   &__item {
     margin: 0 0 30px;
@@ -19,6 +20,7 @@
       display: block;
       margin-bottom: 0.4375rem;
       font-size: 0.8825rem;
+      letter-spacing: 1px;
       color: rgb(0, 0, 6);
       font-weight: 900;
       text-transform: uppercase;
@@ -46,7 +48,7 @@
     overflow: hidden;
     position: relative;
     display: block;
-    margin-bottom: 3.0625rem;
+    margin-bottom: 3.25rem;
     padding-top: 100%;
 
     img {
@@ -68,8 +70,10 @@
   &__more {
     position: relative;
     display: block;
-    font-size: 28px;
+    font-size: 1.75rem;
     color: rgb(0, 0, 0);
+    font-weight: 600;
+    letter-spacing: 3px;
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
@@ -157,11 +161,11 @@
 @media (min-width: $desktop) {
   .blog-preview {
     max-width: 1260px;
-    margin: 0 auto;
+    margin: 0 auto 10.625rem;
 
     &__item {
       width: calc(100%/3 - 60px);
-      margin: 0 30px 69px;
+      margin: 0 30px 99px;
 
       &.animation {
         opacity: 0;
