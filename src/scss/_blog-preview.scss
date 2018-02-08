@@ -1,4 +1,4 @@
-.news-preview {
+.blog-preview {
   padding: 0 20px;
 
   &__item {
@@ -64,12 +64,77 @@
       }
     }
   }
+
+  &__more {
+    position: relative;
+    display: block;
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+
+    a,
+    a:visited {
+      display: inline-block;
+      color: rgb(0, 0, 0);
+      border-bottom: 2px solid rgb(0,0,0);
+      transition: border .3s ease-in-out, opacity .3s ease-in-out;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+
+    &.not-more {
+      display: none;
+    }
+
+    &.loading {
+      pointer-events: none;
+
+      a { opacity: .3 }
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        pointer-events: none;
+        border-radius: 50%;
+        content: '';
+        animation: loading 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite forwards;
+        transition: opacity .3s ease-in-out;
+        box-sizing: border-box;
+      }
+
+      &:before {
+        width: 25px;
+        height: 25px;
+        margin: -12.5px 0 0 -12.5px;
+        border: 2.5px solid #fff;
+        border-color: #fff #fff transparent transparent;
+      }
+
+      &:after {
+        width: 15px;
+        height: 15px;
+        margin: -7.5px 0 0 -7.5px;
+        border: 1.5px solid #fff;
+        border-color: transparent transparent #fff #fff;
+      }
+    }
+  }
 }
 @media (min-width: $phone-landscape) {
-  .news-preview {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .blog-preview {
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     &__item {
       width: calc(100%/2 - 15px);
@@ -77,7 +142,7 @@
   }
 }
 @media (min-width: $tablet-portrait) {
-  .news-preview {
+  .blog-preview {
 
     &__item {
       width: calc(100%/3 - 15px);
@@ -85,12 +150,12 @@
   }
 }
 @media (min-width: $tablet-landscape) {
-  .news-preview {
+  .blog-preview {
 
   }
 }
 @media (min-width: $desktop) {
-  .news-preview {
+  .blog-preview {
     max-width: 1260px;
     margin: 0 auto;
 
@@ -110,5 +175,14 @@
       }
     }
   }
+}
+
+@-webkit-keyframes loading {
+  0% { -webkit-transform: rotate(0) }
+  100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes loading {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
 }
 
