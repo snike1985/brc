@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BCR</title>
+    @@include('./view/components/head.html')
+</head>
+<body>
+
+@@include('./view/templates/loader.html')
+
+@@include('./view/templates/navigation.html')
+
+<main class="site">
+
+    @@include('./view/templates/header.html')
+
+    @@include('./view/templates/hero.html')
+
+    <div data-template="main-title">
+        <div data-widget="text">
+            <h3>
+                welcome to
+            </h3>
+            <h2>
+                The True Spirit of the West
+            </h2>
+            <p>
+                Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br>
+                located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra
+                Madre Mountain range and stunning Medicine Bow National Forest.
+            </p>
+            <p>
+                Lorem ipsum dolor <em>sit amet</em>, consectetur adipisicing elit. <br> Cupiditate, ex! Maiores earum
+                placeat nemo sequi, <br> quia maxime libero sit, dolorem?
+            </p>
+        </div>
+    </div>
+
+    <!-- image-container -->
+    <div class="image-container type_1">
+
+        @@include('./view/templates/logos.html', {
+        "class": "animation"
+        })
+
+        <!-- description -->
+        <div class="description description_white animation">
+            <h2>breathtaking</h2>
+            <p>Connect with an endless expanse of ageless wilderness in ways you never believed were possible.</p>
+        </div>
+        <!-- /description -->
+
+        <img class="image-container__bg" src="img/bg/pic1.jpg" alt="">
+
+        <!-- image-container__mask -->
+        <div class="image-container__mask">
+            <img src="img/masks/mask2.png" alt="">
+        </div>
+        <!-- /image-container__mask -->
+
+    </div>
+    <!-- /image-container -->
+
+    <!-- image-container -->
+    <div class="image-container type_2">
+
+        <!-- movie -->
+        <div class="movie">
+
+            <!-- movie__wrap -->
+            <div class="movie__wrap">
+                <!--<img src="img/bg/pic2.jpg" alt="">-->
+                <video autoplay loop poster="img/bg/pic2.jpg">
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
+                <img src="img/bg/pic2.jpg" alt="">
+            </div>
+            <!-- /movie__wrap -->
+
+            <!-- movie__content -->
+            <div class="movie__content">
+                <!-- description -->
+                <div class="description description_white animation">
+                    <h2>adventure</h2>
+                    <p>An endless array of purely Western excursions allow groups large or small to gather and create
+                        unforgettable memories.</p>
+                </div>
+                <!-- /description -->
+            </div>
+            <!-- /movie__content -->
+
+        </div>
+        <!-- /movie -->
+
+        <img class="image-container__bg" src="img/bg/pic3.jpg" alt="">
+
+        <!-- description -->
+        <div class="description description_white animation">
+            <h2>unmatched</h2>
+            <p>Welcome to pure heaven, born of generations of the finest sporting heritage.</p>
+        </div>
+        <!-- /description -->
+
+    </div>
+    <!-- /image-container -->
+
+    @@include('./view/templates/slider-accomodations.html', {
+    "slider1": "img/slider/sliderimage1.jpg",
+    "slider2": "img/slider/sliderimage1.jpg",
+    "slider3": "img/slider/sliderimage1.jpg"
+    })
+
+    @@include('./view/templates/slider-accomodations-description.html', {
+    "logo": "img/logos/logos1.svg",
+    "title": "lodging for all",
+    "inner": "<p><strong>Feel the Spirit of the West</strong></p><br><br><p>Log cabins and lodges outfitted with modern amenities and lavish <br> accents deliver the ultimate in comfort and provide a rustically <br> elegant setting for your unforgettable adventure. </p><br><p>Room types:</p><ul><li>Lodge Rooms</li><li>Cabin Suites</li><li>Cabin Residence</li></ul>"
+    })
+
+    <div data-template="content">
+        <!-- content -->
+        <div class="content">
+
+            <h2>Heritage</h2>
+
+            <p>For centuries, the Saratoga region had been a destination for Native Americans who came for the area's natural hot springs, and Saratoga quickly
+                became a hub for settlers, trappers, and loggers in the late 19th century. In 1884, the Sterrett brothers settled the land that would become Brush
+                Creek Ranch and built the original homestead with logs cut, skid, and hauled from the adjacent area which is now part of Medicine Bow National
+                Forest. A spirit of hard work, recreation, adventure and good times shared together are prevalent in the archives of days past at Brush Creek Ranch,
+                from famous barn and campfire cookouts to fishing on the renowned Brush Creek. This heritage is still apparent in the current incarnation of
+                Brush Creek as a luxury guest ranch, and visitors will find that, despite the plethora of modern amenities,</p>
+
+            <p>Brush Creek is still a working Wyoming ranch at heart. We are honored to have recently acquired the historic the A Cross/Sanger Ranch
+                is known as the “crown jewel” of the Platte River Valley. This historic property expands upon our proud tradition of preserving the authentic
+                American West and sharing it with our guests for generations to come. Brush Creek Ranch has now doubled in size with 30,000 acres, more
+                than 20 miles of private waters and unlimited wide-open spaces for your sporting and outdoor adventures. Together these historic ranchlands
+                under the Brush Creek Ranch collection, including the A Cross/ Sanger Ranch, Upper and Lower Encampment Ranches and TZ Ranch
+                (location of our Magee Homestead). Brush Creek Ranch was first acquired in 2008 by Bruce White, Chairman and CEO of White Lodging,
+                one of the most respected names in the hotel industry and operator of award-winning premium hotel brands across the country. The Lodge
+                & Spa at Brush Creek Ranch is the culmination of the White family’s extensive hospitality experience, continuous dedication to philanthropy
+                and unabashed passion for the sustainability of authentic Western heritage. Their vision unfolds as a refined 30,000-acre getaway that strikes
+                a perfect balance between active outdoor recreation, shared experiences, economic sustainability and preservation of the Western way of life.</p>
+
+            <h2>Philosophy</h2>
+
+            <p>Ranching has been a sustainable way of life in America's heartland for centuries, and responsible conservation and cultivation of the land
+                continues to endure as the philosophical underpinning of The Lodge and Spa at Brush Creek Ranch. We pride ourselves on offering unforgettable
+                ranch vacations with minimal impact on the environment and, as a working Wyoming ranch, understand that good stewardship of the land will
+                help ensure our ranch will thrive and be enjoyed for generations to come. The Lodge & Spa at Brush Creek Ranch has been recognized as a leader
+                in sustainability among Wyoming guest ranches. With a substantial expanse of land in a conservation easement, our Wyoming guest ranch is
+                committed to harmoniously balancing the needs of wildlife, livestock, the land and watershed through an ongoing land, stream, pond and
+                forestry restoration and management plan. We invite you to read more about Brush Creek Ranch environmental initiatives in our Sustainability Plan.</p>
+
+        </div>
+        <!-- /content -->
+    </div>
+
+    @@include('./view/templates/gallery.html')
+
+    <!-- news-preview -->
+    <div class="news-preview">
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+        <!-- news-preview__item -->
+        <div class="news-preview__item animation">
+            <!-- news-preview__pic -->
+            <a href="#" class="news-preview__pic">
+                <img src="img/news-preview/pic1.jpg" alt="">
+            </a>
+            <!-- /news-preview__pic -->
+
+            <!-- news-preview__description -->
+            <div class="news-preview__description">
+                <time date-time="2018-07-28">july 28</time>
+
+                <h2>Elle Decor - 10 Spa Hotel
+                    Travel Ideas for the
+                    Glamorous but
+                    Lazy Jetsetter</h2>
+
+                <p>Don't bother packing shoes. You won't be
+                    leaving the property.</p>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+            <!-- /news-preview__description -->
+        </div>
+        <!-- /news-preview__item -->
+
+    </div>
+    <!-- /news-preview -->
+
+    @@include('./view/templates/footer_main.html')
+
+</main>
+<script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
