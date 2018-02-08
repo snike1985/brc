@@ -1,9 +1,6 @@
 const gallery = $('.gallery');
 const players = {};
-let activePlayerId;
-let loadYouTubeAPI = false;
-let lazyloadsFor = null;
-let lazyloadsNav = null;
+let canLoadYouTubeAPI = true;
 
 gallery.each(function () {
     const curGallery = $(this);
@@ -12,15 +9,17 @@ gallery.each(function () {
 
     if (curGallery.hasClass('gallery_video')) {
 
-        if (!loadYouTubeAPI) {
+        if (canLoadYouTubeAPI) {
             var tag = document.createElement('script'),
                 firstScriptTag = document.getElementsByTagName('script')[0];
 
             tag.src = "https://www.youtube.com/iframe_api";
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            canLoadYouTubeAPI = false;
         }
 
-        function onYouTubeIframeAPIReady() {
+        window.onYouTubeIframeAPIReady = function() {
             initVideoSliders(sliderFor, sliderNav);
         }
 
@@ -28,25 +27,30 @@ gallery.each(function () {
 });
 
 function initVideoSliders(sliderFor, sliderNav) {
+    let lazyloadsFor = null;
+    let lazyloadsNav = null;
 
-    sliderFor.on('afterChange', function(){
-        setVideo(lazyloadsFor);
-
+    sliderFor.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        if (!players[`youtube${nextSlide}`]) {
+            setVideo(lazyloadsFor.eq(nextSlide));
+        }
+        players[`youtube${currentSlide}`].pauseVideo();
     });
 
     sliderFor.on('init', function(){
-        lazyloadsFor = sliderFor.find('.lazyload');
-        setVideo(lazyloadsFor);
+        lazyloadsFor = sliderFor.find('.slider-for__item');
+        setVideo(lazyloadsFor.eq(0));
+        console.log(players);
     });
 
     sliderNav.on('afterChange', function(){
-        setVideo(lazyloadsNav);
+        setBackground(lazyloadsNav);
 
     });
 
     sliderNav.on('init', function(){
         lazyloadsNav = sliderNav.find('.lazyload');
-        setVideo(lazyloadsNav);
+        setBackground(lazyloadsNav);
     });
 
     sliderFor.slick({
@@ -89,6 +93,8 @@ function initVideoSliders(sliderFor, sliderNav) {
 }
 
 function initSliders(sliderFor, sliderNav) {
+    let lazyloadsFor = null;
+    let lazyloadsNav = null;
 
     sliderFor.on('afterChange', function(){
         setBackground(lazyloadsFor);
@@ -164,18 +170,24 @@ function setBackground(elems) {
         }
     });
 }
-function setVideo(elems) {
-    elems.each(function () {
-        const curElem = $(this);
-        const dataSrc = curElem.data('src');
 
-        if (curElem.hasClass('slick-active') && !curElem.hasClass('loaded')) {
+function setVideo(curElem) {
+    let dataVideo = curElem.data('video'),
+        i = curElem.index();
+    console.log('elem');
 
-            curElem.addClass('loaded');
+    curElem.append(`<div id="youtube${i}"></div>`);
 
-            curElem.css({
-                'background-image': `url(${dataSrc})`
-            });
+    players[`youtube${i}`] = new YT.Player(`youtube${i}`, {
+        videoId: dataVideo,
+        playerVars:
+            {
+                "rel": 0
+            },
+        events: {
+            onReady: function () {
+                curElem.addClass('loaded');
+            }
         }
     });
 }
