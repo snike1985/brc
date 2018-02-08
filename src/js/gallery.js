@@ -28,7 +28,6 @@ gallery.each(function () {
 
 function initVideoSliders(sliderFor, sliderNav) {
     let lazyloadsFor = null;
-    let lazyloadsNav = sliderNav.find('.lazyload');
 
     sliderFor.on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if (!players[`youtube${nextSlide}`]) {
@@ -41,23 +40,6 @@ function initVideoSliders(sliderFor, sliderNav) {
         lazyloadsFor = sliderFor.find('.slider-for__item');
         setVideo(lazyloadsFor.eq(0));
         console.log(players);
-    });
-
-    sliderNav.on('afterChange', function(){
-        lazyloadsNav = sliderNav.find('.lazyload');
-        setBackground(lazyloadsNav);
-
-    });
-
-    sliderNav.on('init', function(){
-        lazyloadsNav = sliderNav.find('.lazyload');
-        setBackground(lazyloadsNav);
-    });
-
-    sliderNav.on('setPosition', function(){
-        // lazyloadsNav = sliderNav.find('.lazyload');
-        // setBackground(lazyloadsNav);
-        console.log('setPosition');
     });
 
     sliderFor.slick({
@@ -101,7 +83,6 @@ function initVideoSliders(sliderFor, sliderNav) {
 
 function initSliders(sliderFor, sliderNav) {
     let lazyloadsFor = null;
-    let lazyloadsNav = null;
 
     sliderFor.on('afterChange', function(){
         setBackground(lazyloadsFor);
@@ -111,16 +92,6 @@ function initSliders(sliderFor, sliderNav) {
     sliderFor.on('init', function(){
         lazyloadsFor = sliderFor.find('.lazyload');
         setBackground(lazyloadsFor);
-    });
-
-    sliderNav.on('afterChange', function(){
-        setBackground(lazyloadsNav);
-
-    });
-
-    sliderNav.on('init', function(){
-        lazyloadsNav = sliderNav.find('.lazyload');
-        setBackground(lazyloadsNav);
     });
 
     sliderFor.slick({

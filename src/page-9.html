@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page_9</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        @@include('./view/templates/loader.html')
+        @@include('./view/templates/navigation.html')
+
+        <main class="site">
+            @@include('./view/templates/header.html')
+
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/pic13.jpg"
+            })
+
+            <section data-template="image-title">
+                <img src="img/bg/pic14.jpg" alt="">
+            </section>
+
+            <section data-template="image-title">
+                <img src="img/bg/pic15.jpg" alt="">
+            </section>
+
+            <section data-template="image-title">
+                <img src="img/bg/pic16.jpg" alt="">
+            </section>
+
+        </main>
+         <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>

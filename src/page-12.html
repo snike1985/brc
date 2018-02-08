@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>[Activities]Page_3</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        @@include('./view/templates/navigation.html')
+
+        <main class="site accomodations">
+            @@include('./view/templates/header.html')
+
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/pic21.jpg"
+            })
+
+            @@include('./view/components/main-title.html', {
+                "h2": "activities",
+                "h3": "grand • heart pounding • exhilarating"
+            })
+
+            <section data-template="text" data-align="center">
+                <div data-widget="text">
+                    <p>Our all-inclusive vacations include luxury lodging, inspired amenities, world-class cuisine,  <br> and vast array of ranch experiences that unfold across an expanse of 30,000 Western acres <br> allowing you to fully immerse yourself in the adventure of a lifetime.</p>
+                </div>
+            </section>
+
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/activities-slider-pic-1.jpg",
+                "slider2": "img/slider/activities-slider-pic-1.jpg",
+                "slider3": "img/slider/activities-slider-pic-1.jpg"
+            })
+
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos1.svg",
+                "title": "challenge yourself",
+                "inner": "<p><strong>Experience the West like Never Before </strong></p><p>Unleash your Western spirit. Unite with your companions. Each morning at Brush Creek Ranch, you will wake up to your choice of adventures that eseem as endless as our wide-open skies. </p><ul><li>Challenge Pursuits</li><li>Horseback Riding</li><li>Lil’ Wranglers</li></ul>"
+            })
+
+
+            @@include('./view/templates/image-title-accomodations.html', {
+                "class": "",
+                "title": "hike away",
+                "image": "img/bg/pic22.jpg",
+                "text": "<p><strong>Endless trails through Western wilderness</strong></p><p>Early morning wildlife treks and all-day forrays <br>will lead you over emerald hills and beyond</p>"
+            })
+
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/activities-slider-pic-2.jpg",
+                "slider2": "img/slider/activities-slider-pic-2.jpg",
+                "slider3": "img/slider/activities-slider-pic-2.jpg"
+            })
+
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos2.svg",
+                "title": "pamper yourself",
+                "inner": "<p><strong>Craft Personalized World-Class Experiences</strong></p><p>Thoughtful design indulge every sense, from vintage wines, to personalized  <br> grotto experiences. Revel in a shared day of fresh mountain air. </p><ul><li>Trail Adventures</li><li>Leisure Pursuits</li><li>Wellness Services</li></ul>"
+            })
+
+            @@include('./view/templates/image-title-accomodations.html', {
+                "class": "text-right-bottom",
+                "title": "trailblazer",
+                "image": "img/bg/activities-section-pic-2.jpg",
+                "text": "<p><strong>Miles of Streams and Acres of Hunting</strong></p><p>The opportunities for recreation and exploration are  <br>as vast as the open Wyoming sky.</p>"
+            })
+
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/activities-slider-pic-3.jpg",
+                "slider2": "img/slider/activities-slider-pic-3.jpg",
+                "slider3": "img/slider/activities-slider-pic-3.jpg"
+            })
+
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos3.svg",
+                "title": "conquer the land",
+                "inner": "<p><strong>Plunge Into Limitless Sporting Adventure</strong></p><p>The traditional sporting lifestyle means true freedom to explore <br>untouched wilderness with unrivaled gear, guns and guides.<ul><li>Fly Fishing</li><li>Wingshooting</li><li>Big Game Hunts</li></ul>"
+            })
+        </main>
+
+        @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+        })
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>[Activities]Page_3</title>
+        @@include('./view/components/head.html')
+    </head>
+    <body>
+        @@include('./view/templates/navigation.html')
+
+        <main class="site accomodations">
+            @@include('./view/templates/header.html')
+
+            @@include('./view/templates/hero2.html', {
+                "heroimage": "img/bg/pic18.jpg"
+            })
+
+            @@include('./view/components/main-title.html', {
+                "h2": "activities",
+                "h3": "grand • heart pounding • exhilarating"
+            })
+
+            @@include('./view/templates/slider-accomodations-description.html', {
+                "logo": "img/logos/logos1.svg",
+                "title": "challenge yourself",
+                "inner": "<p><strong>Experience the West like Never Before </strong></p><p>Unleash your Western spirit. Unite with your companions. Each morning at Brush Creek Ranch, you will wake up to your choice of adventures that eseem as endless as our wide-open skies. </p><ul><li>Challenge Pursuits</li><li>Horseback Riding</li><li>Lil’ Wranglers</li></ul>"
+            })
+
+            @@include('./view/templates/image-title-accomodations.html', {
+            "class": "text-right-bottom",
+            "title": "trailblazer",
+            "image": "img/bg/pic19.jpg",
+            "text": "<p><strong>Miles of Streams and Acres of Hunting</strong></p><p>The opportunities for recreation and exploration are  <br>as vast as the open Wyoming sky.</p>"
+            })
+
+            @@include('./view/templates/conditions.html')
+
+        </main>
+
+        @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+        })
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>
