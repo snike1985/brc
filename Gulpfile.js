@@ -95,7 +95,7 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({optimizationLevel: 5}))
+        // .pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(path.build.img))
         // .pipe(reload({stream: true}));
 });
