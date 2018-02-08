@@ -12,26 +12,14 @@
 
 [data-widget="text"] {
 
-    @media(max-width: $phone-landscape) {
-        br {
-            display: none;
-        }
-
-        > * {
-            margin: 1.5rem 0;
-        }
-
-        .btn {
-            margin-bottom: 3rem;
-        }
-
+    > * {
+        margin: 1.5rem 0;
     }
 
     h1, h2, h3, h4, h5 {
         @extend %Title;
 
         line-height: 1.25;
-        //margin-bottom: 0;
     }
 
     h1 {
@@ -41,6 +29,10 @@
     h2 {
         font-weight: 400;
         font-size: 2.813rem;
+
+        [data-template="grid-contact"] & {
+            font-size: 2.188rem;
+        }
     }
 
     h3 {
@@ -58,6 +50,10 @@
         font-size: 1.25rem;
         line-height: 1.5;
 
+        [data-template="grid-contact"] &, [data-template="grid-career"] & {
+            font-size: 1rem;
+        }
+
     }
 
     b,
@@ -74,5 +70,9 @@
         list-style-position: inside;
         line-height: 1.5;
         font-size: 1.25rem;
+    }
+
+    .btn {
+        margin: 3rem 0;
     }
 }

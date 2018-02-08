@@ -7,13 +7,13 @@
     color: var(--white);
     max-width: 1024px;
 
+    @media(max-width: $desktop-1440) {
+        color: var(--black);
+    }
+
     @media(max-width: $phone-landscape) {
         margin-bottom: 0;
         padding: 3rem 2rem;
-    }
-
-    @media(max-width: $tablet-landscape) {
-        color: var(--black);
     }
 
     @media(max-width: 668px) {

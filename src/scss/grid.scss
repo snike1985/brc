@@ -3,16 +3,3 @@
     width: 100%;
     margin: 0 auto;
 }
-
-.row {
-    display: grid;
-
-    &.col-2 {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 25px;
-    }
-    
-    @media(max-width: $phone-landscape) {
-        display: block;
-    }
-}
