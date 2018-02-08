@@ -14,26 +14,35 @@
             @@include('./view/templates/hero2.html', {
                 "heroimage": "img/bg/pic17.jpg"
             })
+            @@include('./view/components/main-title.html', {
+                "h2": "events",
+                "h3": "exciting"
+            })
 
-            <section data-template="main-title">
+            <section data-template="text" data-align="center">
                 <div data-widget="text">
-                    <h3>read all about it</h3>
-                    <h2>news & press</h2>
                     <p>
-                        Welcome to the Brush Creek Ranch Press Room, where you can find articles covering the best luxury ranch <br>
-                        vacations and reviews of our lodge and spa in Saratoga, Wyoming. We invite you to read and learn more about <br>
-                        our property, one of the world's premier luxury dude ranch destinations.</p>
-
-                    <p>We look forward to the opportunity to share the storied history and beauty of the ranch with you <br>
-                        for media visits, photo shoots or cooperative promotional events.</p>
-
-                    <p>For advertising & marketing promotions inquiries, please email: <br>
-                        <a href="mailTo:marketing@brushcreekranch.com">marketing@brushcreekranch.com</a> <br>
-                        For media inquiries and press visits, please contact <br>
-                        Alana Watkins, VOCA PR: alana@vocapr.com  or 303.962.9163 <br>
+                        There is always something going on around Brush Creek Ranch, from
+                        special holiday celebrations to exciting big game pursuits and everything between.
+                        Peruse our event calendar and plan your perfect getaway today!
                     </p>
                 </div>
             </section>
+
+            <!-- filter -->
+            <div class="filter">
+                <h2>filter events</h2>
+
+                <!-- filter__navigation -->
+                <div class="filter__navigation">
+                    <a href="#" class="active">all</a>
+                    <a href="#">Lodge & Spa</a>
+                    <a href="#">Magee Homestead</a>
+                    <a href="#">French Creek Sportsmen’s Club</a>
+                </div>
+                <!-- /filter__navigation -->
+            </div>
+            <!-- /filter -->
 
             <!-- blog-preview -->
             <div class="blog-preview">

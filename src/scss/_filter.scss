@@ -1,0 +1,43 @@
+.filter {
+
+  &__title {
+
+  }
+
+  &__navigation {
+
+    a,
+    a:visited {
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+      text-decoration: underline;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .active {
+
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .filter {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .filter {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .filter {
+
+  }
+}
+@media (min-width: $desktop) {
+  .filter {
+
+  }
+}
+
