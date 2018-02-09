@@ -1,0 +1,92 @@
+.article-navigation {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 44px 30px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  font-weight: 700;
+
+  a,
+  a:visited {
+    display: block;
+    margin: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: border .3s ease-in-out;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    position: relative;
+    padding-left: 8px;
+    margin-left: 8px;
+
+    &:before {
+      @include absoluteCenterY();
+      left: -1px;
+      width: 2px;
+      height: 1em;
+      background-color: #000;
+      content: '';
+    }
+  }
+
+  &__all {
+
+  }
+
+  &__next {
+
+    &:after {
+      content: '>';
+    }
+  }
+
+  &__prev {
+    position: relative;
+
+    &:before {
+      content: '<';
+    }
+
+    &:after {
+      @include absoluteCenterY();
+      right: -11px;
+      width: 2px;
+      height: 1em;
+      background-color: #000;
+      pointer-events: none;
+      content: '';
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .article-navigation {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .article-navigation {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .article-navigation {
+
+  }
+}
+@media (min-width: $desktop) {
+  .article-navigation {
+
+  }
+}
+

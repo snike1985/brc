@@ -1,4 +1,5 @@
 const btnMore = $('.blog-preview__more');
+const btnFilter = $('.filter__navigation a');
 const list = $('.blog-preview__list');
 let _canAddItem = true;
 let _request = new XMLHttpRequest();
@@ -12,14 +13,37 @@ btnMore.on({
     }
 });
 
-function loadMore() {
+btnFilter.on({
+    'click': function () {
+        let curElem = $(this),
+            dataFilter = curElem.data('filter');
+
+        btnFilter.removeClass('active');
+        curElem.addClass('active');
+
+        clearList(list);
+        loadMore(dataFilter);
+        return false;
+    }
+});
+
+function clearList(obj) {
+    let items = obj.find('.blog-preview__item');
+
+    items.each(function () {
+        $(this).remove();
+    });
+}
+
+function loadMore( filter = '' ) {
 
     _request.abort();
     _request = $.ajax({
         url: 'php/loadMore.php',
         data: {
             action : 'blog',
-            page: curPage
+            page: curPage,
+            filter: filter
         },
         dataType: 'json',
         type: 'get',

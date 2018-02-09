@@ -31,14 +31,14 @@
 
             <!-- filter -->
             <div class="filter">
-                <h2>filter events</h2>
+                <h2 class="filter__title">filter events</h2>
 
                 <!-- filter__navigation -->
                 <div class="filter__navigation">
-                    <a href="#" class="active">all</a>
-                    <a href="#">Lodge & Spa</a>
-                    <a href="#">Magee Homestead</a>
-                    <a href="#">French Creek Sportsmen’s Club</a>
+                    <a href="#" data-filter="0" class="active">all</a>
+                    <a href="#" data-filter="1">Lodge & Spa</a>
+                    <a href="#" data-filter="2">Magee Homestead</a>
+                    <a href="#" data-filter="3">French Creek Sportsmen’s Club</a>
                 </div>
                 <!-- /filter__navigation -->
             </div>
@@ -216,11 +216,11 @@
             </div>
             <!-- /blog-preview -->
 
+            @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+            })
         </main>
 
-        @@include('./view/templates/footer.html', {
-            "datafooter": "accomodations"
-        })
          <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>

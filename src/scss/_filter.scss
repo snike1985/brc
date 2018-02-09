@@ -1,22 +1,44 @@
 .filter {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 54px 30px;
+  text-align: right;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
 
   &__title {
-
+    display: block;
+    margin-bottom: 27px;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   &__navigation {
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
 
     a,
     a:visited {
-      font-size: 18px;
+      display: block;
+      margin-left: 40px;
       color: rgb(0, 0, 0);
-      text-decoration: underline;
-      text-transform: uppercase;
-      line-height: 1.2;
+      border-bottom: 1px solid rgb(0, 0, 0);
+      transition: border .3s ease-in-out;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
     }
 
     .active {
-
+      font-weight: 700;
+      pointer-events: none;
     }
   }
 }
