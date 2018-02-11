@@ -52,6 +52,30 @@
         [data-template="grid-contact"] &, [data-template="grid-career"] & {
             font-size: 1rem;
         }
+    }
+
+    a {
+        display: inline-block;
+        color: inherit;
+        opacity: .75;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 3px;
+            height: 2px; width: 0;
+            background-color: var(--black);
+            opacity: .75;
+            transition: .3s;
+        }
+
+        &:hover {
+            opacity: 1;
+            &:after {
+                width: 100%;
+            }
+        }
 
     }
 
