@@ -5,7 +5,37 @@
     width: 100%;
     margin: 0 auto;
 
-    
+    &.prefooter {
+        margin: 250px auto 0;
+        transform: translatey(-50%);
+
+
+
+        &.text-white {
+            color: var(--white);
+        }
+
+        @media(max-width: 1440px) {
+            //transform: none;
+            color: var(--black);
+            margin: 250px auto -250px;
+
+
+        }
+
+        @media(max-width: $phone-landscape) {
+            transform: none;
+            margin: 0;
+            padding: 5rem 2rem 5rem;
+            background-image: linear-gradient(to top, rgba(#f2f2f2, 1),rgba(#f2f2f2, 0));
+
+            &.text-white {
+                color: var(--black);
+            }
+        }
+    }
+
+
 
     &[data-align="center"] {
         text-align: center;

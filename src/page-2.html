@@ -76,12 +76,20 @@
                 "inner": "<p>Up to 10 guests in a single party will have exclusive access to the ultra-secluded Sportsman’s Club with four private luxury log cabins perched on French Creek, enjoying unlimited access to the notable sporting experiences it affords.<ul><li>Millies Cabin Residence</li><li>Jenkins Cabin Suite</li><li>Barkus Cabin Suite</li><li>Bennet Cabin Suite</li></ul>"
             })
 
-            @@include('./view/templates/footer-title.html')
+            <section class="prefooter text-white" data-template="text" data-align="center">
+                <div data-widget="text">
+                    <h2>Exclusive Luxurious Lodging</h2>
+                    <p>With accomodation options ranging from couples to groups of up to 150, <br>there is no wrong way to experience the West at Brush Creek Ranch.</p>
+                </div>
+            </section>
+
+            <!-- @@include('./view/templates/footer-title.html') -->
+            @@include('./view/templates/footer.html', {
+                "datafooter": "accomodations"
+            })
         </main>
 
-        @@include('./view/templates/footer.html', {
-            "datafooter": "accomodations"
-        })
+
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>
