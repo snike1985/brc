@@ -3,14 +3,10 @@
 
     &[data-footer="accomodations"] {
         margin-top: calc(250px - 2vw);
-        //margin-top: calc(325px - 2vw);
-        //margin-top: calc(100px - 2vw);
-        //margin-top: 250px;
-        //padding-top: 200px;
         position: relative;
         z-index: -1;
 
-        @media(max-width: $phone-landscape) {
+        @media(max-width: $tablet-landscape) {
             margin-top: 0;
         }
 
@@ -36,7 +32,8 @@
       width: 100%;
       min-height: 100%;
       z-index: -1;
-      padding-top: calc(100%*1645/1919);
+      // padding-top: calc(100%*1645/1919);
+      padding-top: 70%;
       background-image: url("../img/footer-bg.jpg");
       background-repeat: no-repeat;
       background-size: cover;

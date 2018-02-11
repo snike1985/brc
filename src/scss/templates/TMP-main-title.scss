@@ -21,6 +21,10 @@
         margin-bottom: 1.875rem;
     }
 
+    + [data-template="text"] {
+        margin-bottom: 5rem;
+    }
+
     @media(max-width: $tablet-landscape) {
         padding: 0 3rem;
     }
