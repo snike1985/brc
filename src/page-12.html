@@ -15,13 +15,13 @@
             })
 
             @@include('./view/components/main-title.html', {
-                "h2": "activities",
-                "h3": "grand • heart pounding • exhilarating"
+                "h2": "wellness & Spa",
+                "h3": "mind • body • spirit"
             })
 
             <section data-template="text" data-align="center">
                 <div data-widget="text">
-                    <p>Our all-inclusive vacations include luxury lodging, inspired amenities, world-class cuisine,  <br> and vast array of ranch experiences that unfold across an expanse of 30,000 Western acres <br> allowing you to fully immerse yourself in the adventure of a lifetime.</p>
+                    <p>Incorporating traditions of the American West and indigenous ingredients, <br> every luxury spa experience is truly Western and tailored specifically <br>to your needs and preferences. We offer offers signature wellness experiences <br> that allow guests to do everything from craft personalized spa treatments to practicing yoga in a traditional yurt and beyond.</p>
                 </div>
             </section>
 
@@ -31,18 +31,31 @@
                 "slider3": "img/slider/activities-slider-pic-1.jpg"
             })
 
-            @@include('./view/templates/slider-accomodations-description.html', {
-                "logo": "img/logos/logos1.svg",
-                "title": "challenge yourself",
-                "inner": "<p><strong>Experience the West like Never Before </strong></p><p>Unleash your Western spirit. Unite with your companions. Each morning at Brush Creek Ranch, you will wake up to your choice of adventures that eseem as endless as our wide-open skies. </p><ul><li>Challenge Pursuits</li><li>Horseback Riding</li><li>Lil’ Wranglers</li></ul>"
-            })
+            <section data-template="title-text-grid">
+                <div class="title">
+                    spa experienceS
+                </div>
+                <div class="subtitle">Personalize World-Class <br> Spa Treatments </div>
+                <div class="row">
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>Luxurious spa treatments and salon services allow for a revitalizing escape for guests at the Brush Creek Ranch Collection. Craft a personalized experience including signature massage, body treatments, and facials featuring top-of-the-line products.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>The facilities across Brush Creek Ranch include a the Trailhead Spa, grotto soaking pool, hot tub, sauna, and steam rooms. Craft your own package including a signature massage, body treatments, and facial – all featuring the best products in the world.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
             @@include('./view/templates/image-title-accomodations.html', {
                 "class": "",
-                "title": "hike away",
+                "title": "relax",
                 "image": "img/bg/pic22.jpg",
-                "text": "<p><strong>Endless trails through Western wilderness</strong></p><p>Early morning wildlife treks and all-day forrays <br>will lead you over emerald hills and beyond</p>"
+                "text": "<p><strong>Unwind in romantic bliss</strong></p><p>After spending your days exploring the Ranch, <br>reconnect with your significant other in style.</p>"
             })
 
             @@include('./view/templates/slider-accomodations.html', {
@@ -51,30 +64,27 @@
                 "slider3": "img/slider/activities-slider-pic-2.jpg"
             })
 
-            @@include('./view/templates/slider-accomodations-description.html', {
-                "logo": "img/logos/logos2.svg",
-                "title": "pamper yourself",
-                "inner": "<p><strong>Craft Personalized World-Class Experiences</strong></p><p>Thoughtful design indulge every sense, from vintage wines, to personalized  <br> grotto experiences. Revel in a shared day of fresh mountain air. </p><ul><li>Trail Adventures</li><li>Leisure Pursuits</li><li>Wellness Services</li></ul>"
-            })
+            <section data-template="title-text-grid">
+                <div class="title">
+                    yoga
+                </div>
+                <div class="subtitle">Root Yourself in the Purity  <br> of the West </div>
+                <div class="row">
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>Yoga at the Ranch provides an unparalleled wellness experience. amid the majestic beauty of our 30,000 acre expanse the Platte River Valley and Sierra Madre mountains, certified instructors have experience teaching at the world's luxury yoga resorts, and bring expertise in a variety of yoga to our ranch.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>Plan a relaxing pause during a busy day of business meetings with a yoga class hosted in one of our majestic outdoor venues. This high level of professional instruction combined with the natural splendor of our luxury ranch setting makes for an unforgettable yoga vacation in Wyoming.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            @@include('./view/templates/image-title-accomodations.html', {
-                "class": "text-right-bottom",
-                "title": "trailblazer",
-                "image": "img/bg/activities-section-pic-2.jpg",
-                "text": "<p><strong>Miles of Streams and Acres of Hunting</strong></p><p>The opportunities for recreation and exploration are  <br>as vast as the open Wyoming sky.</p>"
-            })
-
-            @@include('./view/templates/slider-accomodations.html', {
-                "slider1": "img/slider/activities-slider-pic-3.jpg",
-                "slider2": "img/slider/activities-slider-pic-3.jpg",
-                "slider3": "img/slider/activities-slider-pic-3.jpg"
-            })
-
-            @@include('./view/templates/slider-accomodations-description.html', {
-                "logo": "img/logos/logos3.svg",
-                "title": "conquer the land",
-                "inner": "<p><strong>Plunge Into Limitless Sporting Adventure</strong></p><p>The traditional sporting lifestyle means true freedom to explore <br>untouched wilderness with unrivaled gear, guns and guides.<ul><li>Fly Fishing</li><li>Wingshooting</li><li>Big Game Hunts</li></ul>"
-            })
+            @@@include('./view/templates/conditions.html')
+            
         </main>
 
         @@include('./view/templates/footer.html', {

@@ -50,7 +50,6 @@
                 padding: 4rem 2rem 0;
 
             }
-
         }
     }
 
@@ -72,6 +71,16 @@
             .inner {
                 align-items: center;
                 justify-content: flex-start;
+            }
+        }
+    }
+    &.text-right-top {
+        color: var(--black);
+        
+        .block {
+            .inner {
+                justify-content: flex-end;
+
             }
         }
     }

@@ -2,11 +2,13 @@
     @extend %inner;
 
     padding: 0 3.125rem;
+    //padding: 0 2.75rem;
     margin-top: 7.188rem;
     margin-bottom: 3rem;
     position: relative;
 
     @media(max-width: $phone-landscape) {
+        width: 100%;
         padding: 0;
     }
 
@@ -168,6 +170,10 @@
                     color: var(--blue);
                     font-size: 2.813rem;
                     font-weight: 300;
+
+                    @media(max-width: $phone-landscape) {
+                        font-size: 2rem;
+                    }
                 }
             }
 

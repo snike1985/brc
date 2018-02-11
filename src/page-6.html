@@ -15,15 +15,40 @@
             })
 
             @@include('./view/components/main-title.html', {
-                "h2": "activities",
-                "h3": "grand • heart pounding • exhilarating"
+                "h2": "cuisine",
+                "h3": "world-class"
             })
 
-            @@include('./view/templates/slider-accomodations-description.html', {
-                "logo": "img/logos/logos1.svg",
-                "title": "challenge yourself",
-                "inner": "<p><strong>Experience the West like Never Before </strong></p><p>Unleash your Western spirit. Unite with your companions. Each morning at Brush Creek Ranch, you will wake up to your choice of adventures that eseem as endless as our wide-open skies. </p><ul><li>Challenge Pursuits</li><li>Horseback Riding</li><li>Lil’ Wranglers</li></ul>"
+            <section data-template="text" data-align="center">
+                <div data-widget="text">
+                    <p>The Brush Creek Ranch Collection offers distinct culinary experiences included in your visit, <br> each reflecting the culinary heritage of our region ad showcasing the best Rocky Mountain cuisine. <br> From casual campfire cookouts to formal multi-course meals featuring exclusive Akaushi Beef and <br> impeccable wines, every meal will compliment the adventure you choose to have. </p>
+                </div>
+            </section>
+
+            @@include('./view/templates/slider-accomodations.html', {
+                "slider1": "img/slider/activities-slider-pic-2.jpg",
+                "slider2": "img/slider/activities-slider-pic-2.jpg",
+                "slider3": "img/slider/activities-slider-pic-2.jpg"
             })
+
+            <section data-template="title-text-grid">
+                <div class="title">
+                    culinary experts
+                </div>
+                <div class="subtitle">Experts in Western Cuisine <br> Crafting Every Meal</div>
+                <div class="row">
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>Rustic and refined, the dining experiences feature artfully, fresh, and hearty meals amidst our vast landscapes.  refined Rocky Mountain dining offered  take their inspiration from the traditions of the West. daily menus crafted by the private kitchen at our  Mountain restaurant include a constantly evolving assortment of seasonal flavors plucked from the region. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div data-widget="text">
+                            <p>These fresh and creative dishes are complemented by a thoughtfully curated list of fine wines, premium beers, and superior spirits. Using a farm-to-table approach with regionally sourced ingredients curated by the resident Chef de Cuisine. The culinary team is dedicated to providing guests with an unrivaled selection of a la carte meals that reflect the unsurpassed sophistication of our impeccably designed Wyoming resort.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             @@include('./view/templates/image-title-accomodations.html', {
             "class": "text-right-bottom",

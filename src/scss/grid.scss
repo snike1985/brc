@@ -6,4 +6,8 @@
     @media(max-width: $desktop) {
         width: 85%;
     }
+
+    @media(max-width: $phone-landscape) {
+        width: 100%;
+    }
 }

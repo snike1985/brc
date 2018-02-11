@@ -38,6 +38,10 @@
     text-transform: uppercase;
     line-height: 1.2;
     font-weight: 400;
+
+    @media(max-width: $phone-landscape) {
+        font-size: 2rem;
+    }
   }
 
   p {
@@ -127,4 +131,3 @@
     transform: translate(-100%, 0);
   }
 }
-
