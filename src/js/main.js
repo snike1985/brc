@@ -161,6 +161,46 @@ const base = {
 			})
 		}
 	},
+    _heroAnimation() {
+        var timeline = new TimelineMax();
+
+        timeline.to('.hero-main__people', 1, {scale: 1.7})
+            .to('.hero-main__left', 1, {scale: 1.5}, 0)
+            .to('.hero-main__center', 1, {scale: 1.3}, 0)
+            .to('.hero-main__center-mountain', 1, {scale: 1.1}, 0)
+            .to('.hero-main', 1, {autoAlpha: 0}, .5);
+
+        var controller = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({
+            duration: '100%', // duration in px eg. 300, 0 = autoplay
+            // duration: '100%', // resposive duration in %
+            offset: 0, // offset trigger position by 100px
+            // triggerElement: '.trigger', // what will trigger scene
+            triggerHook: 0
+        });
+        // scene.addIndicators({ name: 'Hero animation' });
+        scene.setTween(timeline);
+        scene.setPin('.hero');
+        scene.addTo(controller);
+    },
+    _tmp() {
+        this.background = skylake.Geb.id("background"),
+            this.center = skylake.Geb.id("left_mountain"),
+            this.foreground = skylake.Geb.id("man"),
+            this.title = skylake.Geb.id("h-header-title"),
+            this.line = skylake.Geb.id("h-header-line"),
+            this.scrollLine = skylake.Geb.id("h-header-scroll-line"),
+            this.scrollTxt = skylake.Geb.id("h-header-scroll-txt"),
+            this.tlImg = new skylake.Timeline,
+            this.tlImg.from(this.foreground, "scale", 1.5, 1, 2e3, "ExpoOut"),
+            this.tlImg.from(this.center, "scale", 1.2, 1, 2e3, "ExpoOut"),
+            this.tlImg.from(this.background, "3dy", 10, 0, 2e3, "ExpoOut"),
+            this.tlImg.from(this.scrollLine, "3dy", 100, 0, 2e3, "ExpoOut"),
+            this.tlImg.from(this.scrollTxt, "3dy", -100, 0, 2e3, "ExpoOut"),
+            this.tlTxt = new skylake.Timeline,
+            this.tlTxt.from(this.title, "3dy", 100, 0, 2e3, "ExpoOut", {delay: 300}),
+            this.tlTxt.from(this.line, "3dx", -101, 0, 2e3, "ExpoOut")
+    },
     init() {
         this._windowHandler();
         this._loader();
@@ -168,9 +208,10 @@ const base = {
         this._header();
         this._menu();
         this._animation();
-        this._parallaxHero();
+        // this._parallaxHero();
         this._parallaxImageBg();
         this._flexibleText();
+        this._heroAnimation();
     }
 }
 
