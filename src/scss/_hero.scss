@@ -54,19 +54,8 @@
   }
 }
 @media (min-width: $desktop) {
-  .site {
-    padding-top: 100vh;
-  }
   .hero {
     min-height: 800px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    .header {
-
-    }
   }
 }
 

@@ -22,9 +22,10 @@ const base = {
     },
     _parallaxHero() {
         const hero = document.querySelector('.hero');
-        const moveElem = hero.querySelector('.hero__movie');
 
         if (hero) {
+            const moveElem = hero.querySelector('.hero__movie');
+
             window.addEventListener('scroll', (e) => {
 
                 const wScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -180,7 +181,7 @@ const base = {
         });
         // scene.addIndicators({ name: 'Hero animation' });
         scene.setTween(timeline);
-        scene.setPin('.hero');
+        scene.setPin('.hero-main');
         scene.addTo(controller);
     },
     _tmp() {
@@ -208,7 +209,7 @@ const base = {
         this._header();
         this._menu();
         this._animation();
-        // this._parallaxHero();
+        this._parallaxHero();
         this._parallaxImageBg();
         this._flexibleText();
         this._heroAnimation();
