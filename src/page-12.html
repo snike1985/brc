@@ -85,13 +85,14 @@
                 </div>
             </section>
 
-            @@@include('./view/templates/conditions.html')
-            
+            @@include('./view/templates/conditions.html')
+
+            @@include('./view/templates/footer.html', {
+                "datafooter": "accomodations"
+            })
         </main>
 
-        @@include('./view/templates/footer.html', {
-            "datafooter": "accomodations"
-        })
+
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>
