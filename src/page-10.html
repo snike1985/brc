@@ -5,7 +5,9 @@
         @@include('./view/components/head.html')
     </head>
     <body>
-        @@include('./view/templates/navigation.html')
+    @@include('./view/templates/loader.html')
+
+    @@include('./view/templates/navigation.html')
 
         <main class="site accomodations">
             @@include('./view/templates/header.html')
@@ -65,6 +67,9 @@
                 </div>
             </section>
         </main>
+        @@include('./view/templates/footer.html', {
+            "datafooter": "accomodations"
+        })
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>
