@@ -15,6 +15,7 @@ button.btn {
   line-height: 1.2;
   background-color: $btnBg;
   border: none;
+  text-decoration: none;
   transition: background .3s ease-in-out;
 
   &:before {
@@ -29,6 +30,8 @@ button.btn {
     box-sizing: border-box;
     content: '';
   }
+
+  &:after { display: none }
 
   &:hover {
     background-color: $btnBgHover;

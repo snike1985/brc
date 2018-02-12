@@ -1,0 +1,53 @@
+////@import "reset";
+@import "./../../../src/scss/resetNew";
+@import "./../../../src/scss/fonts";
+@import "./../../../src/scss/mixins";
+@import "./../../../src/scss/variables";
+@import "./../../../src/scss/typography";
+@import "colors";
+@import "./../../../src/scss/base";
+@import "./../../../src/scss/grid";
+@import "./../../../src/scss/image";
+
+@import "./../../../src/scss/btn";
+@import "./../../../src/scss/site";
+
+
+@import "./../../../src/scss/navigation";
+@import "./../../../src/scss/logo";
+@import "./../../../src/scss/menu";
+@import "./../../../src/scss/weather";
+@import "./../../../src/scss/header";
+@import "./../../../src/scss/footer";
+@import "./../../../src/scss/social";
+@import "./../../../src/scss/awards";
+@import "./../../../src/scss/hero";
+@import "./../../../src/scss/logos";
+@import "./../../../src/scss/description";
+@import "./../../../src/scss/conditions";
+@import "./../../../src/scss/map";
+@import "./../../../src/scss/movie";
+@import "./../../../src/scss/content";
+@import "./../../../src/scss/image-container";
+@import "./../../../src/scss/gallery";
+@import "./../../../src/scss/blog-preview";
+@import "./../../../src/scss/alone-video";
+@import "./../../../src/scss/filter";
+@import "./../../../src/scss/article-navigation";
+@import "./../../../src/scss/article";
+
+//Templates
+@import "./../../../src/scss/templates/TMP-main-title";
+@import "./../../../src/scss/templates/TMP-main-featured";
+@import "./../../../src/scss/templates/TMP-slider";
+@import "./../../../src/scss/templates/TMP-image-title";
+@import "./../../../src/scss/templates/TMP-footer-title";
+@import "./../../../src/scss/templates/TMP-text";
+@import "./../../../src/scss/templates/TMP-grid-career";
+@import "./../../../src/scss/templates/TMP-grid-contact";
+@import "./../../../src/scss/templates/TMP-title-text-grid";
+
+// forms
+@import "./../../../src/scss/forms/formreset.min.css";
+@import "./../../../src/scss/forms/formsmain.min.css";
+@import "./../../../src/scss/site-form";
