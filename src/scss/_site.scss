@@ -3,6 +3,10 @@
   overflow: hidden;
   min-width: 320px;
   min-height: 100vh;
+
+  &_main {
+    padding-top: 170vh;
+  }
 }
 @media (min-width: $phone-landscape) {
   .site {
@@ -22,8 +26,5 @@
 @media (min-width: $desktop) {
   .site {
 
-    &_main {
-      padding-top: 120vh;
-    }
   }
 }

@@ -181,7 +181,7 @@ const base = {
 
         var controller = new ScrollMagic.Controller();
         var scene = new ScrollMagic.Scene({
-            duration: '100%', // duration in px eg. 300, 0 = autoplay
+            duration: '150%', // duration in px eg. 300, 0 = autoplay
             // duration: '100%', // resposive duration in %
             offset: 0, // offset trigger position by 100px
             // triggerElement: '.trigger', // what will trigger scene
