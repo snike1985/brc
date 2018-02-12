@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
-  color: rgb(1, 2, 14);
+  color: $articleColor;
   line-height: 1.2;
   font-size: 16px;
 
@@ -35,7 +35,7 @@
     margin-bottom: 17px;
     font-size: 30px;
     letter-spacing: -1px;
-    color: #572d1d;
+    color: $articleH2;
     text-transform: uppercase;
   }
 
@@ -84,7 +84,7 @@
         height: 4px;
         margin-right: 4px;
         border-radius: 50%;
-        background-color: #000;
+        background-color: $articleCircle;
         content: '';
       }
     }

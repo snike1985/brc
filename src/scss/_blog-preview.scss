@@ -5,13 +5,13 @@
   &__item {
     margin: 0 0 30px;
     font-size: 1rem;
-    color: rgb(87, 45, 29);
+    color: $blogPreviewItemColor;
     line-height: 1.2;
 
     h2 {
       margin-bottom: 0.9375rem;
       font-size: 1.5225rem;
-      color: rgb(87, 45, 29);
+      color: $blogPreviewItemColor;
       text-transform: uppercase;
       font-weight: 400;
     }
@@ -21,7 +21,7 @@
       margin-bottom: 0.4375rem;
       font-size: 0.8825rem;
       letter-spacing: 1px;
-      color: rgb(0, 0, 6);
+      color: $blogPreviewTimeColor;
       font-weight: 900;
       text-transform: uppercase;
     }
@@ -71,7 +71,7 @@
     position: relative;
     display: block;
     font-size: 1.75rem;
-    color: rgb(0, 0, 0);
+    color: $blogPreviewMoreColor;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -81,8 +81,8 @@
     a,
     a:visited {
       display: inline-block;
-      color: rgb(0, 0, 0);
-      border-bottom: 2px solid rgb(0,0,0);
+      color: $blogPreviewMoreColor;
+      border-bottom: 2px solid $blogPreviewMoreColor;
       transition: border .3s ease-in-out, opacity .3s ease-in-out;
 
       &:hover {
@@ -117,16 +117,16 @@
         width: 25px;
         height: 25px;
         margin: -12.5px 0 0 -12.5px;
-        border: 2.5px solid #fff;
-        border-color: #fff #fff transparent transparent;
+        border: 2.5px solid $blogPreviewLoadingColor;
+        border-color: $blogPreviewLoadingColor $blogPreviewLoadingColor transparent transparent;
       }
 
       &:after {
         width: 15px;
         height: 15px;
         margin: -7.5px 0 0 -7.5px;
-        border: 1.5px solid #fff;
-        border-color: transparent transparent #fff #fff;
+        border: 1.5px solid $blogPreviewLoadingColor;
+        border-color: transparent transparent $blogPreviewLoadingColor $blogPreviewLoadingColor;
       }
     }
   }

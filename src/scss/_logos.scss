@@ -18,20 +18,20 @@
     &_2 {
       background-image: url("../img/logos/logos_bg2.png");
 
-      .logos__header { color: rgb(92, 132, 114) }
+      .logos__head { color: $logosHeadColor2 }
     }
 
     &_3 {
       background-image: url("../img/logos/logos_bg3.png");
 
-      .logos__header { color: rgb(198, 125, 42) }
+      .logos__head { color: $logosHeadColor3 }
     }
   }
 
   &__head {
     margin-bottom: 23px;
     font-size: 12.58px;
-    color: rgb(82, 45, 29);
+    color: $logosHeadColor1;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.2;
@@ -55,7 +55,7 @@
     flex-grow: 1;
     margin-bottom: 30px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: $logosContentColor;
     font-weight: 600;
     line-height: 1.375;
 

@@ -15,7 +15,7 @@
     height: 50px;
     margin: 1px 0;
     padding: 5px;
-    background-color: rgba(255, 255, 255, .702);
+    background-color: $navigationBg;
     font-size: 15.53px;
     color: rgb(40, 40, 40);
     font-weight: 700;
@@ -26,8 +26,8 @@
     &:hover {
       position: relative;
       z-index: 1;
-      background-color: rgba(255, 255, 255, 1);
-      box-shadow: 0 0 20px rgba(0,0,0, .5);
+      background-color: $navigationHoverBg;
+      box-shadow: 0 0 20px $navigationHoverShadowColor;
     }
 
     &-icon {

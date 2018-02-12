@@ -29,7 +29,7 @@
     .slick-slide {
       position: relative;
       padding-top: calc(100vw*800/1200);
-      background-color: #ccc;
+      background-color: $videogGllerySliderBg;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -40,16 +40,16 @@
         width: 50px;
         height: 50px;
         margin: -25px 0 0 -25px;
-        border: 5px solid #fff;
-        border-color: #fff #fff transparent transparent;
+        border: 5px solid $videogGlleryLoaderColor;
+        border-color: $videogGlleryLoaderColor $videogGlleryLoaderColor transparent transparent;
       }
 
       &:after {
         width: 30px;
         height: 30px;
         margin: -15px 0 0 -15px;
-        border: 3px solid #fff;
-        border-color: transparent transparent #fff #fff;
+        border: 3px solid $videogGlleryLoaderColor;
+        border-color: transparent transparent $videogGlleryLoaderColor $videogGlleryLoaderColor;
       }
     }
   }
@@ -61,7 +61,7 @@
       position: relative;
       margin: 0 3px;
       height: 100px;
-      background-color: #ccc;
+      background-color: $videogGllerySliderBg;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -92,16 +92,16 @@
       width: 25px;
       height: 25px;
       margin: -12.5px 0 0 -12.5px;
-      border: 2.5px solid #fff;
-      border-color: #fff #fff transparent transparent;
+      border: 2.5px solid $videogGlleryLoaderColor;
+      border-color: $videogGlleryLoaderColor $videogGlleryLoaderColor transparent transparent;
     }
 
     &:after {
       width: 15px;
       height: 15px;
       margin: -7.5px 0 0 -7.5px;
-      border: 1.5px solid #fff;
-      border-color: transparent transparent #fff #fff;
+      border: 1.5px solid $videogGlleryLoaderColor;
+      border-color: transparent transparent $videogGlleryLoaderColor $videogGlleryLoaderColor;
     }
 
     &.loaded {

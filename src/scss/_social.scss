@@ -11,18 +11,18 @@
     height: 40px;
     margin: 0 10px;
     border-radius: 50%;
-    background-color: #8a4b00;
+    background-color: $socialBg;
     transition: background .3s ease-in-out;
 
     svg {
       @include absoluteCenter();
       width: 20px;
       height: 20px;
-      fill: #fff;
+      fill: $socialSVGFill;
     }
     
     &:hover {
-      background-color: #000;
+      background-color: $socialHoverBg;
     }
   }
 }

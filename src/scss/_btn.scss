@@ -9,11 +9,11 @@ button.btn {
   height: 45px;
   padding: 15px 20px;
   font-size: 18.43px;
-  color: rgb(255, 255, 255);
+  color: $btnColor;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-  background-color: #484b49;
+  background-color: $btnBg;
   transition: background .3s ease-in-out;
 
   &:before {
@@ -23,14 +23,14 @@ button.btn {
     bottom: 6px;
     left: 6px;
     opacity: .5;
-    border: 1px solid #fff;
-    box-shadow: inset 0 0 2px #fff;
+    border: 1px solid $btnBorder;
+    box-shadow: inset 0 0 2px $btnBorder;
     box-sizing: border-box;
     content: '';
   }
 
   &:hover {
-    background-color: #194b64;
+    background-color: $btnBgHover;
   }
 
   &.active {

@@ -39,7 +39,7 @@
     position: fixed;
     height: 70px;
     z-index: 3;
-    background-color: rgb(25, 75, 100);
+    background-color: $headerFixedBg;
 
     &:after {
       position: absolute;
@@ -47,7 +47,7 @@
       bottom: 1px;
       height: 4px;
       width: 100%;
-      background-color: #fff;
+      background-color: $headerFixedBorder;
       content: '';
     }
 
@@ -62,7 +62,7 @@
 
       &__item {
 
-        &:before { color: #997337 }
+        &:before { color: $headerFixedMenuHoverColor }
       }
     }
   }

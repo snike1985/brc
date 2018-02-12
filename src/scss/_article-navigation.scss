@@ -6,7 +6,7 @@
   padding: 44px 30px;
   font-size: 18px;
   letter-spacing: 1.5px;
-  color: rgb(0, 0, 0);
+  color: $articleNavColor;
   line-height: 1.2;
   font-weight: 700;
 
@@ -15,8 +15,8 @@
     display: block;
     margin: 10px;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
+    color: $articleNavColor;
+    border-bottom: 1px solid $articleNavColor;
     transition: border .3s ease-in-out;
 
     &:hover {
@@ -35,7 +35,7 @@
       left: -1px;
       width: 2px;
       height: 1em;
-      background-color: #000;
+      background-color: $articleNavColor;
       content: '';
     }
   }
@@ -63,7 +63,7 @@
       right: -11px;
       width: 2px;
       height: 1em;
-      background-color: #000;
+      background-color: $articleNavColor;
       pointer-events: none;
       content: '';
     }

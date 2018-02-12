@@ -34,10 +34,10 @@
 
   > .description_white {
     margin: 0 20px;
-    color: rgb(0, 0, 0);
+    color: $imageContainerDescriptionWhiteColorMobile;
 
     .description__title,
-    h2 { color: rgb(87, 45, 29) }
+    h2 { color: $imageContainerDescriptionWhiteTitleColorMobile }
   }
 
   &__mask {
@@ -103,10 +103,10 @@
 
     > .description_white {
       margin: 0;
-      color: rgb(255, 255, 255);
+      color: $imageContainerDescriptionWhiteColorDesktop;
 
       .description__title,
-      h2 { color: rgb(255, 255, 255) }
+      h2 { color: $imageContainerDescriptionWhiteTitleColorDesktop }
     }
 
     > .description {
@@ -172,14 +172,6 @@
 
     > .conditions {
       margin-bottom: -84px;
-    }
-
-    > .description_white {
-      margin: 0;
-      color: rgb(255, 255, 255);
-
-      .description__title,
-      h2 { color: rgb(255, 255, 255) }
     }
 
     > .description {

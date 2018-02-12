@@ -14,6 +14,7 @@
       width: 28px;
       height: 32px;
       z-index: 1;
+      //background: url('../img/icons/gallery-arrow.svg') no-repeat center;
       background: url('../img/gallery_arrow.png') no-repeat center;
       background-size: contain;
 
@@ -29,7 +30,7 @@
     .slick-slide {
       position: relative;
       padding-top: calc(100vw*800/1200);
-      background-color: #ccc;
+      background-color: $gallerySliderBg;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -48,16 +49,16 @@
         width: 50px;
         height: 50px;
         margin: -25px 0 0 -25px;
-        border: 5px solid #fff;
-        border-color: #fff #fff transparent transparent;
+        border: 5px solid $galleryLoaderColor;
+        border-color: $galleryLoaderColor $galleryLoaderColor transparent transparent;
       }
 
       &:after {
         width: 30px;
         height: 30px;
         margin: -15px 0 0 -15px;
-        border: 3px solid #fff;
-        border-color: transparent transparent #fff #fff;
+        border: 3px solid $galleryLoaderColor;
+        border-color: transparent transparent $galleryLoaderColor $galleryLoaderColor;
       }
     }
   }
@@ -69,7 +70,7 @@
       position: relative;
       margin: 0 3px;
       height: 100px;
-      background-color: #ccc;
+      background-color: $gallerySliderBg;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -100,16 +101,16 @@
       width: 25px;
       height: 25px;
       margin: -12.5px 0 0 -12.5px;
-      border: 2.5px solid #fff;
-      border-color: #fff #fff transparent transparent;
+      border: 2.5px solid $galleryLoaderColor;
+      border-color: $galleryLoaderColor $galleryLoaderColor transparent transparent;
     }
 
     &:after {
       width: 15px;
       height: 15px;
       margin: -7.5px 0 0 -7.5px;
-      border: 1.5px solid #fff;
-      border-color: transparent transparent #fff #fff;
+      border: 1.5px solid $galleryLoaderColor;
+      border-color: transparent transparent $galleryLoaderColor $galleryLoaderColor;
     }
 
     &.loaded {

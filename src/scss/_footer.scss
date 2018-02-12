@@ -67,7 +67,7 @@
       font-size: 12px;
       letter-spacing: 1.2px;
       font-weight: 600;
-      color: rgb(255, 255, 255);
+      color: $footerMenuColor;
       text-transform: uppercase;
       line-height: 1.611;
     }
@@ -80,7 +80,7 @@
     font-style: normal;
     font-size: 14px;
     letter-spacing: 1.25px;
-    color: rgb(255, 255, 255);
+    color: $footerAddressColor;
     text-transform: uppercase;
     line-height: 1.219;
 
@@ -91,7 +91,7 @@
 
     a,
     a:visited {
-      color: rgb(255, 255, 255);
+      color: $footerAddressColor;
     }
   }
 
@@ -111,7 +111,7 @@
     align-items: center;
     position: relative;
     padding: 46px 0 30px;
-    background-color: #000;
+    background-color: $footerBottomBg;
 
     &:before {
       position: absolute;
@@ -120,7 +120,7 @@
       height: 14px;
       width: 100%;
       z-index: 1;
-      background-color: #92703c;
+      background-color: $footerBottomLineBg;
       content: '';
     }
 
@@ -130,7 +130,7 @@
       height: 14px;
       width: 66px;
       z-index: 1;
-      background-color: #000;
+      background-color: $footerBottomBg;
       content: '';
     }
   }
@@ -182,7 +182,7 @@
           width: 4px;
           height: 4px;
           border-radius: 50%;
-          background-color: #fff;
+          background-color: $footerAddressColor;
           content: '';
         }
 
