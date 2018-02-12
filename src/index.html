@@ -16,14 +16,13 @@
 
     @@include('./view/templates/hero_main.html')
 
-    <div data-template="main-title">
+    @@include('./view/components/main-title.html', {
+        "h2": "The True Spirit of the West",
+        "h3": "welcome to"
+    })
+
+    <section data-template="text" data-align="center">
         <div data-widget="text">
-            <h3>
-                welcome to
-            </h3>
-            <h2>
-                The True Spirit of the West
-            </h2>
             <p>
                 Immerse yourself in the storied Great American West at one of our three unique luxury resorts, <br>
                 located in the heart of Wyoming’s famed Platte River Valley, nestled between the ancient <br> Sierra
@@ -34,7 +33,7 @@
                 placeat nemo sequi, <br> quia maxime libero sit, dolorem?
             </p>
         </div>
-    </div>
+    </section>
 
     <!-- image-container -->
     <div class="image-container type_1">

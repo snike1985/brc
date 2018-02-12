@@ -163,7 +163,15 @@ const base = {
 		}
 	},
     _heroAnimation() {
-        var timeline = new TimelineMax();
+        var timeline = new TimelineMax({
+            onComplete:()=> {
+                $('.hero-main').addClass('complete');
+            },
+            onUpdate: ()=> {
+                if ($('.hero-main').hasClass('complete')) $('.hero-main').removeClass('complete');
+
+            }
+        });
 
         timeline.to('.hero-main__people', 1, {scale: 1.7})
             .to('.hero-main__left', 1, {scale: 1.5}, 0)
